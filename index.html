@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zing Mp3</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/play-song-footer.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+</head>
+<body>
+    <div class="app">
+        <!-------- Navigation in the left side --------->
+        <div class="navigation">
+            <!-- Logo -->
+            <button class="mp3-logo-btn" >
+                <div class="mp3-logo" ></div>
+            </button>
+            <!-- First list -->
+            <ul class="nav-list">
+                <li class="nav-item active">
+                    <button title="Cá Nhân" class="nav-item__btn">
+                        <i class="far fa-address-book"></i>
+                        <span>Cá Nhân</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button title="Khám Phá" class="nav-item__btn">
+                        <i class="fab fa-napster"></i>
+                        <span>Khám Phá</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button title="#Zingchart" class="nav-item__btn">
+                        <i class="fas fa-chart-line"></i>
+                        <span>#Zingchart</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button title="Radio" class="nav-item__btn">
+                        <i class="far fa-play-circle"></i>
+                        <span>Radio</span>
+                        <div class="nav-item__btn--live"></div>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button title="Theo Dõi" class="nav-item__btn">
+                        <i class="fab fa-watchman-monitoring"></i>
+                        <span>Theo Dõi</span>
+                    </button>
+                </li>
+            </ul>
+            <div class="nav-divide"></div>
+            <!-- Second list -->
+            <div class="nav-block">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <button title="Nhạc Mới" class="nav-item__btn">
+                            <i class="fas fa-music"></i>
+                            <span>Nhạc Mới</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button title="Thể Loại" class="nav-item__btn">
+                            <i class="far fa-save"></i>
+                            <span>Thể Loại</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button title="Top 100" class="nav-item__btn">
+                            <i class="far fa-star"></i>
+                            <span>Top 100</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button title="MV" class="nav-item__btn">
+                            <i class="fas fa-film"></i>
+                            <span>MV</span>
+                        </button>
+                    </li>
+                </ul>
+                <!-- Banner -->
+                <div class="nav-banner">
+                    <div class="nav-banner__title">Nghe nhạc không quảng cáo cùng kho nhạc VIP</div>
+                    <a class="nav-banner__link upper-case" href="#">Mua Vip</a>
+                </div>
+                <!-- Third list -->
+                <div class="nav-lib">
+                    <div class="nav-lib__title upper-case">
+                        <span>Thư Viện</span>
+                        <button class="hide-top" data-hide="Chỉnh sửa" >
+                            <i class="fas fa-pencil-alt"></i>
+                        </button>
+                    </div>
+                    <ul class="nav-lib__list">
+                        <li class="nav-lib__item">
+                            <a href="" class="nav-lib__item--link">
+                                <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-song.cf0cb0b4.svg" alt="">
+                                <span>Bài hát</span>
+                            </a>
+                        </li>
+                        <li class="nav-lib__item">
+                            <a href="" class="nav-lib__item--link">
+                                <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-playlist.7e92a5f0.svg" alt="">
+                                <span>Playlist</span>
+                            </a>
+                        </li>
+                        <li class="nav-lib__item">
+                            <a href="" class="nav-lib__item--link">
+                                <img src="https://zjs.zadn.vn/zmp3-desktop/releases/v1.0.13/static/media/my-history.374cb625.svg" alt="">
+                                <span>Gần đây</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="nav-playlist">
+                    <ul class="nav-playlist__list" >
+                        <li class="nav-playlist__item" >
+                            <a href="#" class="nav-playlist__item--link">
+                                <span>karaoke</span>
+                                <button class="hide-top" data-hide="Khác" ><i class="fas fa-ellipsis-h"></i></button>
+                            </a>
+                        </li>
+                        <li class="nav-playlist__item" >
+                            <a href="#" class="nav-playlist__item--link">
+                                <span>bolero</span>
+                                <button class="hide-top" data-hide="Khác" ><i class="fas fa-ellipsis-h"></i></button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Button create new playlist -->
+            <div class="nav-new-playlist">
+                <i class="fas fa-plus"></i>
+                <span>Tạo playlist mới</span>
+            </div>
+        </div>
+        <!---x----- Navigation in the left side ----x----->
+
+        <!-------- Main section in the middle --------->
+        <div class="main">
+            <div class="header-blur-background"></div>
+            <div class="header-theme-color"></div>
+            <!-- Header -->
+            <div class="header">
+                <!-- Search box layout -->
+                <div class="search-box">
+                    <span class="back-page-btn"><i class="fas fa-arrow-left"></i></span>
+                    <span class="next-page-btn"><i class="fas fa-arrow-right"></i></span>
+                    <label class="search-input-wrap" for="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="" id="search-input" placeholder="Nhập tên bài hát, Nghệ sĩ hoặc MV...">
+                    </label>
+                </div>
+                <!-- Header tools layout -->
+                <div class="header-tools">
+                    <button class="header-tools-item theme">
+                        <img src="./assets/svg/svg-themet.svg" alt="svg-theme">
+                    </button>
+                    <button class="header-tools-item upload">
+                        <i class="fas fa-upload"></i>
+                    </button>
+                    <button class="header-tools-item setting">
+                        <i class="fas fa-cogs"></i>
+                    </button>
+                    <div class="avatar-user">
+                        <img src="./assets/img/avatar.jpg" alt="avatar-user">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- User profile container -->
+            <div class="user-profile-wrap">
+                <div class="avatar-user">
+                    <img src="./assets/img/avatar.jpg" alt="avatar-user">
+                </div>
+                <h1 class="user-profile__name">Hải Yến (Elephant)</h1>
+                <div class="user-profile__actions">
+                    <span class="buy-vip" >Mua VIP ngay</span>
+                    <span class="get-code" >Nhận Code VIP</span>
+                    <button class="more hide-top" data-hide="Xem thêm" >
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+                
+            </div>
+
+            <!-- Main navigation section -->
+            <div class="main-nav-wrap">
+                <div class="main-nav">
+                    <div class="main-nav__item active">
+                        <span>Tổng quan</span>
+                    </div>
+                    <div class="main-nav__item">
+                        <span>Bài hát</span>
+                    </div>
+                    <div class="main-nav__item">
+                        <span>Playlist</span>
+                    </div>
+                    <div class="main-nav__item">
+                        <span>Nghệ sĩ</span>
+                    </div>
+                    <div class="main-nav__item">
+                        <span>Album</span>
+                    </div>
+                    <div class="main-nav__item">
+                        <span>MV</span>
+                    </div>
+                    <div class="main-nav__item">
+                        <span>Tải lên</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body">
+                
+            </div>
+        </div>
+        <!----x---- Main section in the middle -----x---->
+
+        <!-------- List song section in the right --------->
+        <div class="list-music">
+            <h2>List</h2>
+        </div>
+        <!----x---- List song section in the right -----x---->
+
+        <!-------- Playing song section in the footer --------->
+        <div class="play-foot">
+            <div class="row play">
+                <div class="col l-4">
+                    <div class="play-song">
+                        <div class="play-song__imgBox">
+                            <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/d/2/6/1/d26117831a67fecf48f95c99823cecc6.jpg" alt="Khue moc lang">
+                        </div>
+                        <div class="play-song__info">
+                            <a class="play-song__info--title" href="#">
+                                Khuê Mộc Lang
+                            </a>
+                            <a class="play-song__info--singer" href="#">Hương Ly, Jombie</a>
+                        </div>
+                        <div class="play-song__more">
+                            <button class="like hide-top" data-hide="Thêm vào thư viện">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class=" more hide-top" data-hide="Xem thêm" >
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-4">
+                    <div class="controls-song">
+                        <div class="controls-song__actions">
+                            <button class=" random hide-top" data-hide="Bộ phát ngẫu nhiên" >
+                                <i class="fas fa-random"></i>
+                            </button>
+                            <button class=" previous hide-top" data-hide="Hát bài vừa hát" >
+                                <i class="fas fa-backward"></i>
+                            </button>
+                            <!-- Add class active => button pause -->
+                            <button class="play" >
+                                <i class="play-icon far fa-play-circle"></i>
+                                <i class="pause-icon far fa-pause-circle"></i>
+                            </button>
+                            <button class=" next hide-top" data-hide="Hát bài kế tiếp" >
+                                <i class="fas fa-forward"></i>
+                            </button>
+                            <button class=" repeat hide-top" data-hide="Bật phát lại tất cả">
+                                <i class="fas fa-redo"></i>
+                            </button>
+                        </div>
+                        <div class="controls-song__duration">
+                            <span class="time-current" >00:00</span>
+                            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                            <div class="progress__track song--track">
+                                <div class="progress__track-update"></div>
+                            </div>
+                            <span class="time-end" >--:--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col l-4">
+                    <div class="tools-song">
+                        <button data-hide="Xem MV" class="hide-top tools-song__item mv">
+                            <i class="fas fa-film"></i>
+                        </button>
+                        <button data-hide="Xem lời bài hát" class="hide-top tools-song__item lyrics">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <button data-hide="Chế độ cửa sổ" class="hide-top tools-song__item windown">
+                            <i class="far fa-window-restore"></i>
+                        </button>
+                        <div class="tools-song__item volume">
+                            <button data-hide="Âm lượng" class="hide-top">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                            <div class="volume__track">
+                                <div class="volume__track-update"></div>
+                            </div>
+                        </div>
+                        <div class="tools-song__divide"></div>
+                        <button data-hide="Danh sách phát" class="hide-top toggle-list-music" > 
+                            <i class="fas fa-music"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----x---- Playing song section in the footer -----x---->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="./assets/js/main.js"></script>
+</body>
+</html>

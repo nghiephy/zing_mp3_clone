@@ -1,0 +1,335 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --nav-bg: #231b2e;
+
+    --img-logo-mp3: "https://zmp3-static.zadn.vn/skins/zmp3-v6.1/images/backgrounds/logo-dark.svg";
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-height-cart: 135px;
+    --header-sort-bar-height: 46px;
+    --voucher-item-height: 92px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-with-search-height-cart: calc(var(--header-height-cart) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+* .upper-case {
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.app {
+    display: flex;
+    transition: all .5s;
+}
+
+/* Hide popup for button */
+* button.hide-top {
+    position: relative;
+    color: var(--white-color);
+    padding: 8px;
+    opacity: 0.9;
+    text-align: center;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-radius: 50%;
+    /* display: none; */
+    transition: all .5s;
+}
+
+* button.hide-top::after {
+    content: attr(data-hide);
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #333;
+    color: var(--white-color);
+    position: absolute;
+    top: -34px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+* button.hide-top::before {
+    content: '';
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 10px 12px;
+    border-style: solid;
+    border-color: #333333 transparent transparent transparent;
+    display: none;
+}
+
+* button.hide-top:hover {
+    background-color: #362f40;
+    cursor: pointer;
+}
+
+* button.hide-top:hover::before,
+* button.hide-top:hover::after {
+    display: block;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888;
+border-radius: 10px;
+}
+
+/* Common class */
+
+.inner-border {
+    border: 10px solid var(--white-color);
+    box-shadow: inset 0px 0px 0px 1px var(--boder-color);
+    box-sizing: border-box; /* Include padding and border in element's width and height */
+}
+
+.inner-outline {
+    outline: 1px solid var(--boder-color);
+    outline-offset: -5px;
+}
+
+/* responsive */
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growth {
+    from {
+        transform: scale(0.7);
+    }
+    to {       
+        transform: scale(1);
+    }
+}
+
+@keyframes mobileSearchSideIn {
+    from {
+        opacity: 0;
+        top: calc(var(--header-height)/2);
+    }
+    to {
+        opacity: 1;
+        top: var(--header-height);
+    }
+}
+
+/* Modal css */
+.modal {
+    position: fixed;
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: fadeIn ease-in 0.1s;
+}
+
+.modal__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal__body {
+    margin: auto;
+    z-index: 2;
+    animation: growth linear 0.1s;
+}
+
+/* Btn css */ 
+.btn {
+    min-width: 124px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0 12px;
+    cursor: pointer;
+    color: var(--text-color);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white-color);
+    line-height: 1.6rem;
+}
+
+.btn-back:hover {
+    color: #333;
+    background: #f8f8f8;
+}
+
+.btn--normal:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn--primary:hover {
+    opacity: 0.9;
+}
+
+.btn.btn--disable {
+    cursor: default;
+    background-color: #c3c3c3;
+}
+
+.btn--size-s {
+    height: 32px;
+    font-size: 1.2rem;
+    padding: 0 8px;
+}
+
+.btn--size-l {
+    min-width: 140px;
+    height: 38px;
+    font-size: 1.5rem;
+    padding: 0 8px;
+}
+
+/* Selection */
+.select-input {
+    position: relative;
+    min-width: 200px;
+    height: 34px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 2px #e0e0e0;
+    justify-content: space-between;
+}
+
+.select-input:hover .select-input__list {
+    display: block;
+}
+
+.select-input__label {
+    font-size: 1.4rem;
+}
+
+.select-input__icon {
+    font-size: 1.4rem;
+    color: rgb(131, 131, 131);
+    position: relative;
+    top: 1;
+}
+
+.select-input__list {
+    margin: 0;
+    padding: 8px 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 110%;
+    border-radius: 2px;
+    list-style: none;
+    background-color: var(--white-color);
+    display: none;
+    z-index: 1;
+}
+
+.select-input__list::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    top: -7px;
+    left: 0;
+}
+
+.select-input__link {
+    width: 100%;
+    display: inline-block;
+    font-size: 1.4rem;
+    padding: 8px 0;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.select-input__link:hover {
+    color: var(--primary-color);
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.pagination-item {
+    margin: 0 8px;
+}
+
+.pagination-item__link {
+    --height: 30px;
+    display: block;
+    min-width: 40px;
+    height: var(--height);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #939393;
+    text-align: center;
+    line-height: var(--height);
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: #f36a4f ;
+}
