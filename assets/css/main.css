@@ -1,7 +1,5 @@
-
-.main {
+.main-wrap {
     position: relative;
-    padding: 0;
     width: 100vw;
     height: calc(100vh - 90px);
     flex: 1;
@@ -12,10 +10,14 @@
     /* overflow-y: scroll; */
 }
 
-.body {
-    flex: 1;
+.main {
     width: 100%;
+    padding: 0 4vw;
+    display: flex;
+    flex-direction: column;
     background-color: #170f23;
+    overflow-x: hidden;
+    /* overflow-y: scroll; */
 }
 
 .header-blur-background {
@@ -37,7 +39,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 270px;
+    height: 300px;
     background-image: linear-gradient( 180deg,hsla(0,0%,100%,0),#170f23);
 }
 
@@ -46,7 +48,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative; 
+    position: absolute; 
+    left: 0;
     padding-top: 18px;
     color: var(--white-color);
 }
@@ -64,9 +67,12 @@
 
 .user-profile__actions {
     position: absolute;
-    top: 30px;
-    right: 20px;
+    top: 16px;
+    right: 30px;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .user-profile__actions span {
@@ -91,8 +97,18 @@
     color: #fff;
 }
 
+.user-profile__actions .more {
+    padding: 8px;
+    background-color: #362f40;
+    cursor: pointer;
+}
+
+.user-profile__actions .more:hover {
+    opacity: 0.8;
+}
+
 .user-profile__actions .more::after {
-    width: 60px;
+    width: 30px;
 }
 
 /* Main navigation css */
@@ -103,7 +119,7 @@
     width: 100%;
     position: relative;
     min-height: 52px;
-    margin-top: 40px;
+    margin-top: 220px;
     margin-bottom: 30px;
 }
 
@@ -136,5 +152,233 @@
 .main-nav__item.active {
     background-color: #6e6875;
     border-radius: 100px;
+    opacity: 1;
+}
+
+.main-body-warp {
+    flex: 1;
+    width: 100%;
+    background-color: #170f23;
+}
+
+.mymusic-section {
+    position: relative;
+    width: 100%;
+}
+
+.mymusic-section__header {
+    margin-bottom: 10px;
+}
+
+.mymusic-section__header a {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.mymusic-section__header a:hover {
+    color: #c662ef;
+}
+
+.mymusic-controls button {
+    outline: none;
+    border-radius: 99px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 6px 19px;
+}
+
+.mymusic-controls button:hover {
+    opacity: 0.8;
+}
+
+.mymusic-controls__upload {
+    border: 1px solid hsla(0,0%,100%,0.1);
+    background-color: hsla(0,0%,100%,0.1);
+    margin-right: 15px;
+}
+
+.mymusic-controls-play {
+    background-color: #7200a1;
+    border: 1px solid #7200a1;
+}
+.mymusic-section__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.mymusic-section__body {
+    height: 244px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+
+.mymusic-animate {
+    padding-left: 0;
+    width: 270px;
+    margin: 0;
+}
+
+.mymusic-list-song {
+    height: 100%;
+    position: relative;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.mymusic-list-song__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mymusic-list-song__item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mymusic-item-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.mymusic-item-play-btn i {
+    font-size: 1.6rem;
+}
+
+.mymusic-item-play-btn:hover i {
+    opacity: 0.8;
+}
+
+.mymusic-list-song__item:hover .mymusic-item-play-btn {
+    display: inline-block;
+}
+
+.mymusic-item-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    width: 50%;
+}
+.mymusic-item-info__imgBox {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.mymusic-item-info__imgBox:hover {
+    cursor: pointer;
+}
+
+.mymusic-item-info__imgBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.mymusic-list-song__item:hover .mymusic-item-info__imgBox {
+    opacity: 0.5;
+}
+
+.mymusic-item-info__name h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.mymusic-item-info__name-singer,
+.mymusic-item-time {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1.2rem;
+}
+
+.mymusic-item-info__name-singer a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #c662ef;
+}
+
+.mymusic-item-time {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+}
+
+.mymusic-item-info, 
+.mymusic-item-controls {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+
+.mymusic-item-controls button {
+    font-size: 1.3rem;
+    padding: 10px;
+    opacity: 0.6;
+}
+
+.mymusic-item-controls button:hover {
+    background-color: hsla(0,0%,100%,0.1);
+}
+
+.mymusic-item-controls button:hover i {
+    opacity: 0.9;
+}
+
+.mymusic-list-song__item:hover .mymusic-item-controls button {
+    opacity: 1;
+}
+
+.mymusic-item-controls .mymusic-item-controls__lyric-btn {
+    padding: 8px 10px;
+}
+
+.mymusic-item-controls__mv-btn::after {
+    width: 50px;
+}
+
+.mymusic-item-controls__lyric-btn::after {
+    width: 120px
+}
+
+.mymusic-item-controls__heart-btn::after {
+    width: 100px;
+}
+
+button.song-heart-btn {
+    font-size: 1.6rem;
+    padding: 7px;
+}
+
+button.song-heart-btn i {
+    transform: translateY(2px);
+}
+
+button.song-heart-btn .fas {
+    color: #7200a1;
     opacity: 1;
 }

@@ -35,6 +35,10 @@
     margin-right: 12px;
 }
 
+.play-song__imgBox:hover {
+    cursor: pointer;
+}
+
 .play-song__imgBox img {
     position: absolute;
     top: 0;
