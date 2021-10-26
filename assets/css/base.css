@@ -70,7 +70,6 @@ html {
     left: 50%;
     transform: translateX(-50%);
     display: none;
-    z-index: 100;
 }
 
 * button.hide-top::before {
@@ -123,6 +122,87 @@ html {
     outline: 1px solid var(--boder-color);
     outline-offset: -5px;
 }
+
+/* Common variables */
+.mr-10 {
+    margin-right: 10px !important;
+}
+
+.mb-10 {
+    margin-bottom: 10px !important;
+}
+
+.mb-15 {
+    margin-bottom: 15px !important;
+}
+
+.mb-16 {
+    margin-bottom: 16px !important;
+}
+
+.mb-20 {
+    margin-bottom: 20px !important;
+}
+
+.mb-30 {
+    margin-bottom: 30px !important;
+}
+
+.mb-40 {
+    margin-bottom: 40px !important;
+}
+
+.mb-50 {
+    margin-bottom: 50px !important;
+}
+
+.mt-5 {
+    margin-top: 5px !important;
+}
+
+.mt-10 {
+    margin-top: 10px !important;
+}
+
+.mt-15 {
+    margin-top: 15px !important;
+}
+
+.mt-30 {
+    margin-top: 30px !important;
+}
+
+.mt-40 {
+    margin-top: 40px !important;
+}
+
+.mt-50 {
+    margin-top: 50px !important;
+}
+
+.mr-20 {
+    margin-right: 20px !important;
+}
+
+.pt-4 {
+    padding-top: 4px !important;
+}
+
+.pt-8 {
+    padding-top: 8px !important;
+}
+
+.pt-12 {
+    padding-top: 12px !important;
+}
+
+.pt-16 {
+    padding-top: 16px !important;
+}
+.pr-20 {
+    padding-right: 20px !important;
+}
+
 
 /* responsive */
 

@@ -218,17 +218,63 @@
     align-items: stretch;
 }
 
-.mymusic-animate {
+.mymusic-slider {
+    position: relative;
     padding-left: 0;
     width: 270px;
+    height: 230px;
     margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.mymusic-slider .mymusic-slider-item {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all .9s;
+    width: 230px;
+    height: 230px;
+}
+
+.mymusic-slider .mymusic-slider-item img {
+    height: 100%;
+}
+
+.mymusic-slider .mymusic-slider-item.third {
+    z-index: 1;
+    left: 0;
+    width: 162px;
+    height: 162px;
+    opacity: .3;
+    background-image: linear-gradient(
+    90deg,hsla(0,0%,100%,.5) 1%,rgba(0,0,0,.6) 14%);
+}
+
+.mymusic-slider .mymusic-slider-item.second {
+    z-index: 2;
+    left: 20px;
+    width: 196px;
+    height: 196px;
+    opacity: .7;
+    background-image: linear-gradient(
+    90deg,hsla(0,0%,100%,.5) 1%,rgba(0,0,0,.6) 14%);
+}
+
+.mymusic-slider .mymusic-slider-item.first {
+    z-index: 3;
+    left: 40px;
+    opacity: 1;
+    width: 230px;
+    height: 230px;
 }
 
 .mymusic-list-song {
+    display: inline-block;
     height: 100%;
     position: relative;
     flex: 1;
-    overflow-y: scroll;
 }
 
 .mymusic-list-song__item {
@@ -354,7 +400,7 @@
 }
 
 .mymusic-item-controls .mymusic-item-controls__lyric-btn {
-    padding: 8px 10px;
+    padding: 9px 11px;
 }
 
 .mymusic-item-controls__mv-btn::after {
@@ -362,7 +408,7 @@
 }
 
 .mymusic-item-controls__lyric-btn::after {
-    width: 120px
+    width: 120px;
 }
 
 .mymusic-item-controls__heart-btn::after {
@@ -381,4 +427,8 @@ button.song-heart-btn i {
 button.song-heart-btn .fas {
     color: #7200a1;
     opacity: 1;
+}
+
+.track-vertical:hover {
+    opacity: 1 !important;
 }

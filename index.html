@@ -250,175 +250,282 @@
                             </div>
                         </div>
                         <div class="mymusic-section__body">
-                            <ul class="mymusic-animate" >
-                                <li><img src="./assets/img/songs/song_img_1.jpg" alt=""></li>
-                            </ul>
+                            <div class="mymusic-slider mr-20" >
+                                <div class="mymusic-slider-item first" ><img src="./assets/img/slider/slider_img_1.jpg" alt=""></div>
+                                <div class="mymusic-slider-item second" ><img src="./assets/img/slider/slider_img_2.jpg" alt=""></div>
+                                <div class="mymusic-slider-item third" ><img src="./assets/img/slider/slider_img_3.jpg" alt=""></div>
+                                <div class="mymusic-slider-item third" ><img src="./assets/img/slider/slider_img_4.jpg" alt=""></div>
+                                <div class="mymusic-slider-item third" ><img src="./assets/img/slider/slider_img_5.jpg" alt=""></div>
+                                <div class="mymusic-slider-item third" ><img src="./assets/img/slider/slider_img_6.jpg" alt=""></div>
+                                <div class="mymusic-slider-item third" ><img src="./assets/img/slider/slider_img_7.jpg" alt=""></div>
+                                <div class="mymusic-slider-item third" ><img src="./assets/img/slider/slider_img_8.jpg" alt=""></div>
+                            </div>
                             <div class="mymusic-list-song">
-                                <div class="mymusic-list-song__item">
-                                    <div class="mymusic-item-info">
-                                        <div class="mymusic-item-info__imgBox">
-                                            <img src="./assets/img/songs/song_img_1.jpg" alt="song1">
-                                        </div>
-                                        <div class="mymusic-item-info__name">
-                                            <h4>Sợ Phải Kết Thúc</h4>
-                                            <div class="mymusic-item-info__name-singer">
-                                                <a>Nhật Phong</a>
+                                <div class="mymusic-list-song__item-wrap" style="position: relative; overflow: hidden; width: 100%; height: 100%;">
+                                    <div style="position: absolute; inset: 0px; overflow: hidden scroll; margin-right: -6px; margin-bottom: 0px;">
+                                        <div class="mymusic-list-song__item">
+                                        <div class="mymusic-item-info">
+                                            <div class="mymusic-item-info__imgBox">
+                                                <img src="./assets/img/songs/song_img_1.jpg" alt="song1">
+                                            </div>
+                                            <div class="mymusic-item-info__name">
+                                                <h4>Sợ Phải Kết Thúc</h4>
+                                                <div class="mymusic-item-info__name-singer">
+                                                    <a>Nhật Phong</a>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <span class="mymusic-item-time">03:20</span>
-                                    <div class="mymusic-item-controls">
-                                        <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
-                                            <i class="fas fa-film"></i>
-                                        </button>
-                                        <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
-                                            <i class="fas fa-microphone"></i>
-                                        </button>
-                                        <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
-                                            <i class="fas fa-ellipsis-h"></i>
-                                        </button>
-                                    </div>
-                                    <!-- Button play when hover item -->
-                                    <button class="mymusic-item-play-btn" >
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                </div>
-                                <div class="mymusic-list-song__item">
-                                    <div class="mymusic-item-info">
-                                        <div class="mymusic-item-info__imgBox">
-                                            <img src="./assets/img/songs/song_img_2.jpg" alt="song1">
+                                        <span class="mymusic-item-time">03:20</span>
+                                        <div class="mymusic-item-controls">
+                                            <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
+                                                <i class="fas fa-film"></i>
+                                            </button>
+                                            <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
+                                                <i class="fas fa-microphone"></i>
+                                            </button>
+                                            <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
+                                                <i class="fas fa-heart"></i>
+                                            </button>
+                                            <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
+                                                <i class="fas fa-ellipsis-h"></i>
+                                            </button>
                                         </div>
-                                        <div class="mymusic-item-info__name">
-                                            <h4>Cho Anh Say</h4>
-                                            <div class="mymusic-item-info__name-singer">
-                                                <a>Phan Duy Anh</a>
+                                        <!-- Button play when hover item -->
+                                        <button class="mymusic-item-play-btn" >
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                        </div>
+                                        <div class="mymusic-list-song__item">
+                                            <div class="mymusic-item-info">
+                                                <div class="mymusic-item-info__imgBox">
+                                                    <img src="./assets/img/songs/song_img_2.jpg" alt="song1">
+                                                </div>
+                                                <div class="mymusic-item-info__name">
+                                                    <h4>Cho Anh Say</h4>
+                                                    <div class="mymusic-item-info__name-singer">
+                                                        <a>Phan Duy Anh</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <span class="mymusic-item-time">03:45</span>
-                                    <div class="mymusic-item-controls">
-                                        <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
-                                            <i class="fas fa-film"></i>
-                                        </button>
-                                        <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
-                                            <i class="fas fa-microphone"></i>
-                                        </button>
-                                        <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
-                                            <i class="fas fa-ellipsis-h"></i>
-                                        </button>
-                                    </div>
-                                    <!-- Button play when hover item -->
-                                    <button class="mymusic-item-play-btn" >
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                </div>
-                                <div class="mymusic-list-song__item">
-                                    <div class="mymusic-item-info">
-                                        <div class="mymusic-item-info__imgBox">
-                                            <img src="./assets/img/songs/song_img_3.jpg" alt="song1">
-                                        </div>
-                                        <div class="mymusic-item-info__name">
-                                            <h4>Anh Thương Em Nhất Mà?</h4>
-                                            <div class="mymusic-item-info__name-singer">
-                                                <a>Lã</a>,
-                                                <a>Log</a>,
-                                                <a>TiB</a>
+                                            <span class="mymusic-item-time">03:45</span>
+                                            <div class="mymusic-item-controls">
+                                                <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
+                                                    <i class="fas fa-film"></i>
+                                                </button>
+                                                <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
+                                                    <i class="fas fa-microphone"></i>
+                                                </button>
+                                                <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                                <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </button>
                                             </div>
+                                            <!-- Button play when hover item -->
+                                            <button class="mymusic-item-play-btn" >
+                                                <i class="fas fa-play"></i>
+                                            </button>
                                         </div>
-                                    </div>
-                                    <span class="mymusic-item-time">03:20</span>
-                                    <div class="mymusic-item-controls">
-                                        <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
-                                            <i class="fas fa-film"></i>
-                                        </button>
-                                        <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
-                                            <i class="fas fa-microphone"></i>
-                                        </button>
-                                        <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
-                                            <i class="fas fa-ellipsis-h"></i>
-                                        </button>
-                                    </div>
-                                    <!-- Button play when hover item -->
-                                    <button class="mymusic-item-play-btn" >
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                </div>
-                                <div class="mymusic-list-song__item">
-                                    <div class="mymusic-item-info">
-                                        <div class="mymusic-item-info__imgBox">
-                                            <img src="./assets/img/songs/song_img_4.jpg" alt="song1">
-                                        </div>
-                                        <div class="mymusic-item-info__name">
-                                            <h4>Tình Sầu Thiên Thu Muôn Lối</h4>
-                                            <div class="mymusic-item-info__name-singer">
-                                                <a>Doãn Hiếu</a>,
-                                                <a>B.</a>
+                                        <div class="mymusic-list-song__item">
+                                            <div class="mymusic-item-info">
+                                                <div class="mymusic-item-info__imgBox">
+                                                    <img src="./assets/img/songs/song_img_3.jpg" alt="song1">
+                                                </div>
+                                                <div class="mymusic-item-info__name">
+                                                    <h4>Anh Thương Em Nhất Mà?</h4>
+                                                    <div class="mymusic-item-info__name-singer">
+                                                        <a>Lã</a>,
+                                                        <a>Log</a>,
+                                                        <a>TiB</a>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <span class="mymusic-item-time">04:10</span>
-                                    <div class="mymusic-item-controls">
-                                        <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
-                                            <i class="fas fa-film"></i>
-                                        </button>
-                                        <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
-                                            <i class="fas fa-microphone"></i>
-                                        </button>
-                                        <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
-                                            <i class="fas fa-ellipsis-h"></i>
-                                        </button>
-                                    </div>
-                                    <!-- Button play when hover item -->
-                                    <button class="mymusic-item-play-btn" >
-                                        <i class="fas fa-play"></i>
-                                    </button>
-                                </div>
-                                <div class="mymusic-list-song__item">
-                                    <div class="mymusic-item-info">
-                                        <div class="mymusic-item-info__imgBox">
-                                            <img src="./assets/img/songs/song_img_4.jpg" alt="song1">
-                                        </div>
-                                        <div class="mymusic-item-info__name">
-                                            <h4>Tình Sầu Thiên Thu Muôn Lối</h4>
-                                            <div class="mymusic-item-info__name-singer">
-                                                <a>Doãn Hiếu</a>,
-                                                <a>B.</a>
+                                            <span class="mymusic-item-time">03:20</span>
+                                            <div class="mymusic-item-controls">
+                                                <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
+                                                    <i class="fas fa-film"></i>
+                                                </button>
+                                                <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
+                                                    <i class="fas fa-microphone"></i>
+                                                </button>
+                                                <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                                <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </button>
                                             </div>
+                                            <!-- Button play when hover item -->
+                                            <button class="mymusic-item-play-btn" >
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                        <div class="mymusic-list-song__item">
+                                            <div class="mymusic-item-info">
+                                                <div class="mymusic-item-info__imgBox">
+                                                    <img src="./assets/img/songs/song_img_4.jpg" alt="song1">
+                                                </div>
+                                                <div class="mymusic-item-info__name">
+                                                    <h4>Tình Sầu Thiên Thu Muôn Lối</h4>
+                                                    <div class="mymusic-item-info__name-singer">
+                                                        <a>Doãn Hiếu</a>,
+                                                        <a>B.</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="mymusic-item-time">04:10</span>
+                                            <div class="mymusic-item-controls">
+                                                <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
+                                                    <i class="fas fa-film"></i>
+                                                </button>
+                                                <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
+                                                    <i class="fas fa-microphone"></i>
+                                                </button>
+                                                <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                                <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </button>
+                                            </div>
+                                            <!-- Button play when hover item -->
+                                            <button class="mymusic-item-play-btn" >
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                        <div class="mymusic-list-song__item">
+                                            <div class="mymusic-item-info">
+                                                <div class="mymusic-item-info__imgBox">
+                                                    <img src="./assets/img/songs/song_img_5.jpg" alt="song1">
+                                                </div>
+                                                <div class="mymusic-item-info__name">
+                                                    <h4>Lá Xa Lìa Cành</h4>
+                                                    <div class="mymusic-item-info__name-singer">
+                                                        <a>Lê Bảo Bình</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="mymusic-item-time">04:52</span>
+                                            <div class="mymusic-item-controls">
+                                                <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
+                                                    <i class="fas fa-film"></i>
+                                                </button>
+                                                <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
+                                                    <i class="fas fa-microphone"></i>
+                                                </button>
+                                                <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                                <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </button>
+                                            </div>
+                                            <!-- Button play when hover item -->
+                                            <button class="mymusic-item-play-btn" >
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                        <div class="mymusic-list-song__item">
+                                            <div class="mymusic-item-info">
+                                                <div class="mymusic-item-info__imgBox">
+                                                    <img src="./assets/img/songs/song_img_6.jpg" alt="song1">
+                                                </div>
+                                                <div class="mymusic-item-info__name">
+                                                    <h4>Bước Qua Đời Nhau</h4>
+                                                    <div class="mymusic-item-info__name-singer">
+                                                        <a>Lê Bảo Bình</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="mymusic-item-time">04:10</span>
+                                            <div class="mymusic-item-controls">
+                                                <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
+                                                    <i class="fas fa-film"></i>
+                                                </button>
+                                                <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
+                                                    <i class="fas fa-microphone"></i>
+                                                </button>
+                                                <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                                <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </button>
+                                            </div>
+                                            <!-- Button play when hover item -->
+                                            <button class="mymusic-item-play-btn" >
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                        <div class="mymusic-list-song__item">
+                                            <div class="mymusic-item-info">
+                                                <div class="mymusic-item-info__imgBox">
+                                                    <img src="./assets/img/songs/song_img_7.jpg" alt="song1">
+                                                </div>
+                                                <div class="mymusic-item-info__name">
+                                                    <h4>Hoa Hải Đường</h4>
+                                                    <div class="mymusic-item-info__name-singer">
+                                                        <a>Jack</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="mymusic-item-time">04:10</span>
+                                            <div class="mymusic-item-controls">
+                                                <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
+                                                    <i class="fas fa-film"></i>
+                                                </button>
+                                                <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
+                                                    <i class="fas fa-microphone"></i>
+                                                </button>
+                                                <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                                <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </button>
+                                            </div>
+                                            <!-- Button play when hover item -->
+                                            <button class="mymusic-item-play-btn" >
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                        </div>
+                                        <div class="mymusic-list-song__item">
+                                            <div class="mymusic-item-info">
+                                                <div class="mymusic-item-info__imgBox">
+                                                    <img src="./assets/img/songs/song_img_8.jpg" alt="song1">
+                                                </div>
+                                                <div class="mymusic-item-info__name">
+                                                    <h4>Cứ Ngỡ Là Anh</h4>
+                                                    <div class="mymusic-item-info__name-singer">
+                                                        <a>Đinh Tùng Huy</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="mymusic-item-time">03:10</span>
+                                            <div class="mymusic-item-controls">
+                                                <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
+                                                    <i class="fas fa-film"></i>
+                                                </button>
+                                                <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
+                                                    <i class="fas fa-microphone"></i>
+                                                </button>
+                                                <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
+                                                    <i class="fas fa-heart"></i>
+                                                </button>
+                                                <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
+                                                    <i class="fas fa-ellipsis-h"></i>
+                                                </button>
+                                            </div>
+                                            <!-- Button play when hover item -->
+                                            <button class="mymusic-item-play-btn" >
+                                                <i class="fas fa-play"></i>
+                                            </button>
                                         </div>
                                     </div>
-                                    <span class="mymusic-item-time">04:10</span>
-                                    <div class="mymusic-item-controls">
-                                        <button data-hide="Xem MV" class="hide-top mymusic-item-controls__mv-btn" >
-                                            <i class="fas fa-film"></i>
-                                        </button>
-                                        <button data-hide="Phát cùng lời bài hát" class="hide-top mymusic-item-controls__lyric-btn" >
-                                            <i class="fas fa-microphone"></i>
-                                        </button>
-                                        <button data-hide="Xóa khỏi thư viện" class="song-heart-btn heart-active hide-top mymusic-item-controls__heart-btn" >
-                                            <i class="fas fa-heart"></i>
-                                        </button>
-                                        <button data-hide="Khác" class="hide-top mymusic-item-controls__other-btn" >
-                                            <i class="fas fa-ellipsis-h"></i>
-                                        </button>
-                                    </div>
-                                    <!-- Button play when hover item -->
-                                    <button class="mymusic-item-play-btn" >
-                                        <i class="fas fa-play"></i>
-                                    </button>
+
+                                     <div class="track-vertical" style="position: absolute;width: 4px;transition: opacity 200ms ease 0s;opacity: 0;right: 2px;top: 2px;bottom: 2px;z-index: 100;"><div class="thumb-vertical" style="position: relative; display: block; width: 100%; height: 48px; border-radius: 9px; transform: translateY(0px);"></div></div>
                                 </div>
-                                <div class="track-vertical" style="position: absolute;width: 4px;transition: opacity 200ms ease 0s;opacity: 0;right: 2px;top: 2px;bottom: 2px;z-index: 100;"><div class="thumb-vertical" style="position: relative; display: block; width: 100%; height: 48px; transform: translateY(19.6721px);"></div></div>
                             </div>
                         </div>
                     </div>
