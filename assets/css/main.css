@@ -332,6 +332,7 @@
     color: #fff;
     width: 50%;
 }
+
 .mymusic-item-info__imgBox {
     width: 40px;
     height: 40px;
@@ -340,10 +341,12 @@
     margin-right: 10px;
 }
 
+.mv-item-info__imgBox:hover,
 .mymusic-item-info__imgBox:hover {
     cursor: pointer;
 }
 
+.mv-item-info__imgBox img,
 .mymusic-item-info__imgBox img {
     width: 100%;
     height: 100%;
@@ -360,6 +363,7 @@
     margin-bottom: 5px;
 }
 
+.mv-item-info__name-singer,
 .mymusic-item-info__name-singer,
 .mymusic-item-time {
     color: #fff;
@@ -367,6 +371,7 @@
     font-size: 1.2rem;
 }
 
+.mv-item-info__name-singer a:hover,
 .mymusic-item-info__name-singer a:hover {
     cursor: pointer;
     text-decoration: underline;
@@ -440,14 +445,6 @@ button.song-heart-btn .fas {
 }
 
 /* playlist section in main */
-.playlist-item__imgbox {
-    height: 0;
-    line-height: 0;
-    padding-bottom: 100%;
-    border-radius: 5px;
-    overflow: hidden;
-    position: relative;
-}
 
 .item-img-controls {
     position: absolute;
@@ -504,19 +501,28 @@ button.song-heart-btn .fas {
     width: 60px;
 }
 
-.playlist-item__imgbox img {
+.container-item__imgbox {
+    height: 0;
+    line-height: 0;
+    padding-bottom: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.container-item__imgbox img {
     width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transition: transform .7s;
     cursor: pointer;
 }
 
-.playlist-item__imgbox:hover img {
+.container-item__imgbox:hover img {
     transform: scale(1.12);
     opacity: 0.4;
 }
 
-.playlist-item__imgbox:hover .item-img-controls {
+.container-item__imgbox:hover .item-img-controls {
     display: flex;
 }
 
@@ -527,11 +533,11 @@ button.song-heart-btn .fas {
     align-items: center;
 }
 
-.playlist-controls {
+.container-controls {
     transform: translateY(8px);
 }
 
-.playlist-controls button {
+.container-controls button {
     border: none;
     outline: none;
     background-color: transparent;
@@ -540,18 +546,18 @@ button.song-heart-btn .fas {
     align-self: flex-start;
 }
 
-.playlist-controls button i {
+.container-controls button i {
     color: var(--white-color);
     font-size: 1.8rem;
     font-weight: 600;
     opacity: 0.9;
 }
 
-.playlist-controls button:hover i {
+.container-controls button:hover i {
     opacity: 0.8;
 }
 
-.playlist-controls button.disable i {
+.container-controls button.disable i {
     opacity: 0.3;
 }
 
@@ -579,24 +585,101 @@ button.song-heart-btn .fas {
 
 }
 
-.playlist-item {
+.container-item__info {
     color: var(--white-color);
 }
 
-.playlist-item a {
+.mv-item-info__name h4,
+.container-item__info a {
     display: block;
     font-size: 1.4rem;
     margin-top: 10px;
     font-weight: 600;
 }
 
-.playlist-item a:hover {
+.mv-item-info__name h4:hover,
+.container-item__info a:hover {
     color: #c662ef;
+    cursor: pointer;
 }
 
-.playlist-item p {
+.container-item p {
     margin: 0;
     margin-top: 6px;
     font-size: 1.2rem;
     opacity: 0.6;
+}
+
+    /* MV container css */
+.mv-item__imgbox {
+    padding-bottom: 56.25%;
+}
+
+.mv-item__imgbox .item-img-controls {
+    left: 50%;
+    top: 50%;
+    right: unset;
+    transform: translate(-50%, -50%);
+}
+
+.mv-item-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    padding: 10px 0;
+}
+
+.mv-item-info__imgBox {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.mv-item-info__name h4 {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.mv-item__imgbox .mv-item-delete-btn {
+    position: absolute;
+    top: 4%;
+    right: 4%;
+    z-index: 10;
+    padding: 16px;
+}
+
+.mv-item__imgbox .mv-item-delete-btn:hover {
+    background-color: hsla(0,0%,100%,0.3);
+}
+
+.mv-item__imgbox .mv-item-delete-btn i {
+    font-size: 2.6rem;
+    opacity: 0.8;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.mv-item__imgbox .mv-item-delete-btn:hover i {
+    opacity: 0.7;
+}
+
+.mv-item-time-label {
+    display: inline-block;
+    line-height: normal;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    padding: 3px 5px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
 }
