@@ -1,6 +1,7 @@
 const heartBtnEles = document.querySelectorAll('.song-heart-btn');
 const musicListEle = document.querySelector('.mymusic-list-song div div');
 const slideImgs = document.querySelectorAll('.mymusic-slider-item');
+const mainWrapEle = document.querySelector('.main-wrap');
 
 // Handle when click heart button
 heartBtnEles.forEach(item => {
@@ -56,5 +57,15 @@ function slideShow() {
     }
     setTimeout(slideShow, 2000)
 }
+
+// Handle add header background when scroll
+mainWrapEle.addEventListener('scroll', () => {
+    const headerEle = document.querySelector('.main-wrap .header');
+    if(mainWrapEle.scrollTop > 0)
+        headerEle.classList.add('active-bg');
+    else 
+        headerEle.classList.remove('active-bg');
+
+})
 
 slideShow();

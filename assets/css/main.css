@@ -595,6 +595,14 @@ button.song-heart-btn .fas {
     font-size: 1.4rem;
     margin-top: 10px;
     font-weight: 600;
+    height: 19px;
+    width: 100%;
+    line-height: 19px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
 }
 
 .mv-item-info__name h4:hover,
@@ -651,6 +659,11 @@ button.song-heart-btn .fas {
     right: 4%;
     z-index: 10;
     padding: 16px;
+    display: none;
+}
+
+.mv-item__imgbox:hover .mv-item-delete-btn {
+    display: inline-block;
 }
 
 .mv-item__imgbox .mv-item-delete-btn:hover {
@@ -682,4 +695,57 @@ button.song-heart-btn .fas {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.7);
     cursor: pointer;
+}
+
+.singer-item__imgbox {
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.singer-item__imgbox:hover img {
+    opacity: 0.9;
+}
+
+.singer-item {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align: center;
+}
+
+.singer-item__info a {
+    margin: 14px 0 4px 0;
+}
+
+.singer-item__info span {
+    font-size: 1.2rem;
+    opacity: 0.6;
+    cursor: default;
+}
+
+.singer-item-follow-btn {
+    color: var(--white-color);
+    background-color: #7200a1;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding: 8px 19px;
+    text-transform: uppercase;
+    border-radius: 100px;
+    margin: 15px auto;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.singer-item-follow-btn:hover {
+    opacity: 0.8;
+}
+
+.singer-item-follow-btn i {
+    margin-right: 6px;
+    font-size: 1.6rem;
+    /* transform: translateY(1px); */
 }
