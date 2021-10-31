@@ -7,12 +7,12 @@
     flex-direction: column;
     background-color: #170f23;
     overflow-x: hidden;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
 }
 
-/* .main-wrap::-webkit-scrollbar {
+.main-wrap::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .main {
     width: 100%;
@@ -748,4 +748,9 @@ button.song-heart-btn .fas {
     margin-right: 6px;
     font-size: 1.6rem;
     /* transform: translateY(1px); */
+}
+
+.list-music {
+    background-color: #170f23;
+    border-left: 1px solid hsla(0,0%,100%,0.1);
 }
