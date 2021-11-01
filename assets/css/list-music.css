@@ -3,10 +3,21 @@
     width: 320px;
     height: 100vh;
     padding: 0 8px 15px 8px;
-    overflow-x: hidden;
+    overflow: hidden;
+    padding-top: 16px;
+}
+
+.list-music .list {
+    height: calc(100vh - 68px);
+    overflow-y: hidden;
+}
+
+.list-music .list:hover {
+    overflow-y: auto;
 }
 
 .list-controls {
+    height: 68px;
     position: relative;
     display: flex;
     justify-content: flex-start;
@@ -33,7 +44,7 @@
     text-align: center;
     opacity: 0.8;
     font-weight: 500;
-    padding: 6px 11px;
+    padding: 6px 10px;
     font-size: 1.2rem;
 }
 
