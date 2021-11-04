@@ -1,3 +1,29 @@
+/* Large PC */
+@media (min-width: 1635px) {
+    .hide-on-large-pc {
+            display: none;
+        }
+}
+
+/* < large PC */
+@media (max-width: 1635px) {
+    .list-music {
+        position: absolute;
+        top: 0;
+        right: -320px;
+        z-index: 10;
+        transition: all .5s ease-in;
+    }
+
+    .list-music.active {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        transition: all .5s ease-in;
+    }
+}
+
 /* PC */
 @media (min-width: 1024px) {
     .hide-on-pc {
@@ -15,9 +41,12 @@
 /* Mobile & Tablet */
 @media (max-width: 1023px) {
     
-
     .hide-on-mobile-tablet {
         display: none;
+    }
+
+    .navigation .nav-item__btn {
+        padding: 22px 25px;
     }
 
 }
@@ -36,6 +65,10 @@
 
     .hide-on-mobile {
         display: none;
+    }
+
+    .header .search-input-wrap {
+        width: 90%;
     }
    
 }

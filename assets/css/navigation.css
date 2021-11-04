@@ -9,6 +9,7 @@
     align-items:center;
     justify-content:center;
     flex-direction:column;
+    transition: all .2s ease-in;
 }
 
 .mp3-logo-btn {
@@ -302,4 +303,67 @@
 .nav-new-playlist span {
     font-weight: 700;
     font-size: 1.4rem;
+}
+
+.logo-mobile-btn {
+    display: block;
+    line-height: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.logo-mobile-btn div {
+    width: 45px;
+    height: 45px;
+    background-image: url('../svg/logo-mobile.svg');
+}
+
+.logo-mobile-btn:hover {
+    opacity: 0.8;
+}
+
+.mb-nav-full-btn {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    padding: 8px;
+    background-color: hsl(262deg 16% 26%);
+    border-radius: 999px;
+    line-height: normal;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mb-nav-full-btn:hover {
+    opacity: 0.8;
+}
+
+.mb-nav-full-btn i {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 1.4rem;
+    color: var(--white-color);
+}
+
+.navigation.small{
+    width: 70px;
+}
+
+.navigation.small .nav-lib__item a span,
+.app .navigation.small button span {
+    display: none;
+    
+}
+
+.navigation.small .nav-item__btn {
+    padding: 27px 25px;
+}
+
+.navigation.small .nav-divide::after {
+    width: 20px;
 }

@@ -25,10 +25,13 @@
 <body>
     <div class="app">
         <!-------- Navigation in the left side --------->
-        <div class="navigation">
+        <div class="navigation hide-on-mobile">
             <!-- Logo -->
-            <button class="mp3-logo-btn" >
+            <button class="mp3-logo-btn hide-on-mobile-tablet" >
                 <div class="mp3-logo" ></div>
+            </button>
+            <button class="logo-mobile-btn hide-on-pc" >
+                <div></div>
             </button>
             <!-- First list -->
             <ul class="nav-list">
@@ -94,13 +97,13 @@
                     </li>
                 </ul>
                 <!-- Banner -->
-                <div class="nav-banner">
+                <div class="nav-banner hide-on-mobile-tablet">
                     <div class="nav-banner__title">Nghe nhạc không quảng cáo cùng kho nhạc VIP</div>
                     <a class="nav-banner__link upper-case" href="#">Mua Vip</a>
                 </div>
                 <!-- Third list -->
                 <div class="nav-lib">
-                    <div class="nav-lib__title upper-case">
+                    <div class="nav-lib__title upper-case hide-on-mobile-tablet">
                         <span>Thư Viện</span>
                         <button class="hide-top" data-hide="Chỉnh sửa" >
                             <i class="fas fa-pencil-alt"></i>
@@ -128,7 +131,7 @@
                     </ul>
                 </div>
 
-                <div class="nav-playlist">
+                <div class="nav-playlist hide-on-mobile-tablet">
                     <ul class="nav-playlist__list" >
                         <li class="nav-playlist__item" >
                             <a href="#" class="nav-playlist__item--link">
@@ -146,10 +149,14 @@
                 </div>
             </div>
             <!-- Button create new playlist -->
-            <div class="nav-new-playlist">
+            <div class="nav-new-playlist hide-on-mobile-tablet">
                 <i class="fas fa-plus"></i>
                 <span>Tạo playlist mới</span>
             </div>
+
+            <span class="mb-nav-full-btn hide-on-pc" >
+                <i class="fas fa-chevron-right"></i>
+            </span>
         </div>
         <!---x----- Navigation in the left side ----x----->
 
@@ -159,8 +166,8 @@
             <div class="header">
                 <!-- Search box layout -->
                 <div class="search-box">
-                    <span class="back-page-btn"><i class="fas fa-arrow-left"></i></span>
-                    <span class="next-page-btn"><i class="fas fa-arrow-right"></i></span>
+                    <span class="back-page-btn hide-on-mobile"><i class="fas fa-arrow-left"></i></span>
+                    <span class="next-page-btn hide-on-mobile"><i class="fas fa-arrow-right"></i></span>
                     <div class="search-input-wrap">
                         <label class="search-input" for="search-input">
                             <i class="fas fa-search"></i>
@@ -175,6 +182,18 @@
                                     <i class="fas fa-search"></i>
                                     <p>Châu Khải Phong</p>
                                 </li>
+                                <li class="search-item" >
+                                    <i class="fas fa-search"></i>
+                                    <p>#zingchart</p>
+                                </li>
+                                <li class="search-item" >
+                                    <i class="fas fa-search"></i>
+                                    <p>Thay lòng</p>
+                                </li>
+                                <li class="search-item" >
+                                    <i class="fas fa-search"></i>
+                                    <p>Khuê Mộc Lang</p>
+                                </li>
                             </ul>
                         </label>
 
@@ -183,13 +202,13 @@
                 </div>
                 <!-- Header tools layout -->
                 <div class="header-tools">
-                    <button class="header-tools-item theme">
+                    <button class="header-tools-item theme hide-on-mobile">
                         <img src="./assets/svg/svg-themet.svg" alt="svg-theme">
                     </button>
-                    <button class="header-tools-item upload">
+                    <button class="header-tools-item upload hide-on-mobile">
                         <i class="fas fa-upload"></i>
                     </button>
-                    <button class="header-tools-item setting">
+                    <button class="header-tools-item setting hide-on-mobile">
                         <i class="fas fa-cogs"></i>
                     </button>
                     <div class="avatar-user">
@@ -209,7 +228,7 @@
                         <img src="./assets/img/avatar.jpg" alt="avatar-user">
                     </div>
                     <h1 class="user-profile__name">Hải Yến (Elephant)</h1>
-                    <div class="user-profile__actions">
+                    <div class="user-profile__actions hide-on-mobile hide-on-tablet">
                         <span class="buy-vip" >Mua VIP ngay</span>
                         <span class="get-code" >Nhận Code VIP</span>
                         <button class="more hide-top" data-hide="Khác" >
@@ -558,7 +577,7 @@
                             </div>
                         </div>
                         <div class="playlist__list-wrap col l-12 m-12 c-12">
-                            <div class="row la-15-gutter playlist__list">
+                            <div class="row no-wrap la-15-gutter playlist__list">
                                 <div class="col l-2-4 m-3 c-4">
                                     <div class="playlist-empty">
                                         <i class="fas fa-plus mb-20"></i>
@@ -669,7 +688,7 @@
                             </div>
                         </div>
                         <div class="album__list-wrap col l-12 m-12 c-12">
-                            <div class="row la-15-gutter album__list">
+                            <div class="row no-wrap la-15-gutter album__list">
                                 <div class="col l-2-4 m-3 c-4">
                                     <div class="album-item container-item">
                                         <div class="container-item__imgbox">
@@ -791,8 +810,8 @@
                             </div>
                         </div>
                         <div class="mv__list-wrap col l-12 m-12 c-12">
-                            <div class="row la-15-gutter mv__list">
-                                <div class="col l-4 m-6 c-12">
+                            <div class="row no-wrap la-15-gutter mv__list">
+                                <div class="col l-4 m-4 c-12">
                                     <div class="mv-item container-item">
                                         <div class="container-item__imgbox mv-item__imgbox">
                                             <img src="./assets/img/mv/mv_1.jpg" alt="">
@@ -820,7 +839,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col l-4 m-6 c-12">
+                                <div class="col l-4 m-4 c-12">
                                     <div class="mv-item container-item">
                                         <div class="container-item__imgbox mv-item__imgbox">
                                             <img src="./assets/img/mv/mv_2.jpg" alt="">
@@ -847,7 +866,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col l-4 m-6 c-12">
+                                <div class="col l-4 m-4 c-12">
                                     <div class="mv-item container-item">
                                         <div class="container-item__imgbox mv-item__imgbox">
                                             <img src="./assets/img/mv/mv_3.jpg" alt="">
@@ -891,7 +910,7 @@
                             </div>
                         </div>
                         <div class="singer__list-wrap col l-12 m-12 c-12">
-                            <div class="row la-15-gutter singer__list">
+                            <div class="row no-wrap la-15-gutter singer__list">
                                 <div class="col l-2-4 m-3 c-4">
                                     <div class="singer-item container-item">
                                         <div class="singer-item__imgbox container-item__imgbox">
@@ -1451,7 +1470,7 @@
         <!-------- Playing song section in the footer --------->
         <div class="play-foot">
             <div class="row play">
-                <div class="col l-4">
+                <div class="col l-4 m-4 c-12">
                     <div class="play-song">
                         <div class="play-song__imgBox">
                             <img src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/cover/d/2/6/1/d26117831a67fecf48f95c99823cecc6.jpg" alt="Khue moc lang">
@@ -1472,7 +1491,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col l-4">
+                <div class="col l-4 m-4 c-12">
                     <div class="controls-song">
                         <div class="controls-song__actions">
                             <button class=" random hide-top" data-hide="Bộ phát ngẫu nhiên" >
@@ -1503,7 +1522,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col l-4">
+                <div class="col l-4 m-4 c-12">
                     <div class="tools-song">
                         <button data-hide="Xem MV" class="hide-top tools-song__item mv">
                             <i class="fas fa-film"></i>
@@ -1523,8 +1542,8 @@
                                 <div class="volume__track-update"></div>
                             </div>
                         </div>
-                        <div class="tools-song__divide"></div>
-                        <button data-hide="Danh sách phát" class="hide-top toggle-list-music" > 
+                        <div class="tools-song__divide hide-on-large-pc"></div>
+                        <button data-hide="Danh sách phát" class="hide-top toggle-list-music hide-on-large-pc" > 
                             <i class="fas fa-music"></i>
                         </button>
                     </div>

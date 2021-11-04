@@ -17,6 +17,11 @@
     margin-right: -4px;
 }
 
+.row.no-wrap {
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
 .row.no-gutters {
     margin-left: 0;
     margin-right: 0;

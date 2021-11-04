@@ -2,6 +2,10 @@ const heartBtnEles = document.querySelectorAll('.song-heart-btn');
 const musicListEle = document.querySelector('.mymusic-list-song div div');
 const slideImgs = document.querySelectorAll('.mymusic-slider-item');
 const mainWrapEle = document.querySelector('.main-wrap');
+const toggleListMusicEle = document.querySelector('.toggle-list-music');
+const listMusicEle = document.querySelector('.app .list-music');
+const mbNavFulBtn = document.querySelector('.navigation .mb-nav-full-btn');
+const navLayoutEle = document.querySelector('.navigation');
 
 // Handle when click heart button
 heartBtnEles.forEach(item => {
@@ -12,6 +16,30 @@ heartBtnEles.forEach(item => {
         hearIcon.classList.toggle('fas');
     })
 })
+
+// Handle when click button toggle list music in the right
+toggleListMusicEle.addEventListener('click', (e) => {
+    listMusicEle.classList.toggle('active');
+})
+
+// Handle when click button display full nav layout
+mbNavFulBtn.addEventListener('click', (e) => {
+    navLayoutEle.classList.toggle('small');
+    mbNavFulBtn.querySelector('i').classList.toggle('fa-chevron-right');
+    mbNavFulBtn.querySelector('i').classList.toggle('fa-chevron-left');
+})
+
+// Handle display small nav when screen.width < 1023px
+var onresize = function() {
+    width = document.body.clientWidth;
+    if(width <= 1023) {
+        navLayoutEle.classList.add('small');
+    }
+    if(width > 1023) {
+        navLayoutEle.classList.remove('small');
+    }
+ }
+ window.addEventListener("resize", onresize);
 
 // Handle vertical scrollbar in songlist
 let scrollTimer = -1;

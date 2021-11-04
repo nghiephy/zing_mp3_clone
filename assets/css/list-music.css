@@ -1,9 +1,10 @@
 .list-music {
     position: relative;
     width: 320px;
-    height: 100vh;
+    height: 100%;
     padding: 0 8px 15px 8px;
     overflow: hidden;
+    /* transform: translateX(100%); */
 }
 
 .list-music .list {
