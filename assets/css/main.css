@@ -700,7 +700,7 @@ button.song-heart-btn .fas {
 }
 
 .singer-item__imgbox {
-    border-radius: 999px;
+    border-radius: 50%;
     cursor: pointer;
 }
 

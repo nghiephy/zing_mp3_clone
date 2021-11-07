@@ -18,6 +18,8 @@
     outline: none;
     cursor: pointer;
     padding: 15px 28px;
+    text-align: left;
+    width: 100%;
 }
 
 .mp3-logo {
@@ -306,7 +308,7 @@
 }
 
 .logo-mobile-btn {
-    display: block;
+    display: none;
     line-height: 0;
     background-color: transparent;
     border: none;
@@ -366,4 +368,12 @@
 
 .navigation.small .nav-divide::after {
     width: 20px;
+}
+
+.navigation.small .logo-mobile-btn{
+    display: block;
+}
+
+.navigation.small .mp3-logo-btn {
+    display: none;
 }
