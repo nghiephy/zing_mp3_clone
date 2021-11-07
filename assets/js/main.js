@@ -6,6 +6,8 @@ const toggleListMusicEle = document.querySelector('.toggle-list-music');
 const listMusicEle = document.querySelector('.app .list-music');
 const mbNavFulBtn = document.querySelector('.navigation .mb-nav-full-btn');
 const navLayoutEle = document.querySelector('.navigation');
+const navLabelEles = document.querySelectorAll('.main-nav__item');
+const navContentEles = document.querySelectorAll('.nav-content');
 
 // Handle when click heart button
 heartBtnEles.forEach(item => {
@@ -17,6 +19,21 @@ heartBtnEles.forEach(item => {
     })
 })
 
+// Handle tabui
+navLabelEles.forEach((navLabelEle, index) => {
+    const navContentEle = navContentEles[index];
+
+    navLabelEle.onclick = function () {
+        
+        document.querySelector('.nav-content.active').classList.remove('active');
+        document.querySelector('.main-nav__item.active').classList.remove('active');
+
+        this.classList.add('active');
+        navContentEle.classList.add('active');
+
+    }
+})
+console.log(navContentEles);
 // Handle when click button toggle list music in the right
 toggleListMusicEle.addEventListener('click', (e) => {
     listMusicEle.classList.toggle('active');
@@ -37,6 +54,9 @@ var onresize = function() {
     }
     if(width > 1023) {
         navLayoutEle.classList.remove('small');
+    }
+    if(width <= 1635) {
+        listMusicEle.classList.remove('active');
     }
  }
  window.addEventListener("resize", onresize);

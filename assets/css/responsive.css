@@ -24,6 +24,13 @@
     }
 }
 
+/* Fig bug ui in width: 1175px */
+@media (max-width: 1175px) {
+    .singer-item-follow-btn {
+        padding: 7px 13px;
+    }
+}
+
 /* PC */
 @media (min-width: 1024px) {
     .hide-on-pc {
@@ -96,52 +103,30 @@
         height: 45px;
     }
 
-    .mb-foot__controls {
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-    }
-
-    .controls-list {
+    .mb-foot__play {
         display: flex;
         align-items: center;
-        list-style: none;
-        height: 100%;
-        width: 100%;
-        padding-left: 0;
-        margin: 0;
     }
 
-    .controls-item {
-        height: 100%;
-        width: calc(100%/5);
-        opacity: 0.9;
+    .foot-play-controls {
+        margin-right: 5%;
     }
 
-    .controls-item a {
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        flex-direction:column;
-        width: 100%;
-        height: 100%;
-    }
-   
-    .controls-item i {
-        color: var(--white-color);
+    .foot-play-controls button i {
         font-size: 1.6rem;
-
     }
 
-    .controls-item span {
-        font-size: 1.1rem;
-        margin-top: 4px;
+    .foot-play-controls button::after {
+        width: 60px;
     }
 
-    .controls-item.active {
-        background-color: hsla(0,0%,100%,0.1);
+    .foot-play-controls .mb-foot-previous,
+    .foot-play-controls .mb-foot-next {
+        padding: 8px 11px;
     }
 
-    .controls-item.active i {
-        opacity: 0.7;
+    .mb-foot-play {
+        margin: 0 8px;
     }
 
     /* play layout */
@@ -153,6 +138,7 @@
         width: 100%;
         height: 100%;
         padding: 0;
+        flex: 1;
     }
     
     .foot-play-info__imgBox {
@@ -231,6 +217,56 @@
         background-color: rgba(0, 0, 0, 0.7);
         cursor: pointer;
     }
+
+    .mb-foot__controls {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .controls-list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        height: 100%;
+        width: 100%;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .controls-item {
+        height: 100%;
+        width: calc(100%/5);
+        opacity: 0.9;
+    }
+
+    .controls-item a {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+        width: 100%;
+        height: 100%;
+    }
+   
+    .controls-item i {
+        color: var(--white-color);
+        font-size: 1.6rem;
+
+    }
+
+    .controls-item span {
+        font-size: 1.1rem;
+        margin-top: 4px;
+    }
+
+    .controls-item.active {
+        background-color: hsla(0,0%,100%,0.1);
+    }
+
+    .controls-item.active i {
+        opacity: 0.7;
+    }
+
+    
 }
 
 /* Low Mobile */
