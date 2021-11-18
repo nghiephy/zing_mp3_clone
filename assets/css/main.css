@@ -169,6 +169,21 @@
     background-color: #170f23;
 }
 
+.slider-list-wrap,
+.mv__list-wrap,
+.album__list-wrap,
+.playlist__list-wrap {
+    overflow: auto;
+}
+
+.slider-list-wrap::-webkit-scrollbar,
+.mv__list-wrap::-webkit-scrollbar,
+.album__list-wrap::-webkit-scrollbar,
+.playlist__list-wrap::-webkit-scrollbar {
+    visibility: hidden;
+    display: none;
+}
+
 .nav-content {
     position: relative;
     width: 100%;
@@ -178,6 +193,42 @@
 
 .nav-content.active {
     display: block;
+}
+
+.nav-songs .mymusic-section {
+    height: 100%;
+}
+
+.nav-songs .mymusic-section__body {
+    height: 100%;
+}
+
+.mymusic-list-song__label {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px 15px 10px;
+    border-radius: 5px;
+    text-align: left;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mymusic-list-song__label .song-label-name,
+.mymusic-list-song__label .song-label-time {
+    color: #fff;
+    opacity: 0.8;
+    font-size: 1.2rem;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.mymusic-list-song__label .song-label-time {
+    transform: translateX(-6px);
 }
 
 .mymusic-section {
@@ -624,6 +675,11 @@ button.song-heart-btn .fas {
 .container-item__info a:hover {
     color: #c662ef;
     cursor: pointer;
+}
+
+.container-item-wrap {
+    position: relative;
+    transition: all .5s;
 }
 
 .container-item p {

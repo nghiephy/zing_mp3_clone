@@ -33,7 +33,100 @@ navLabelEles.forEach((navLabelEle, index) => {
 
     }
 })
-console.log(navContentEles);
+
+
+function handleSlider(section, scalePC, scaleTa, scaleMb) {
+    const sliderItems = section.querySelectorAll( ".container-item-wrap");
+    const sliderRightBtn = section.querySelector('.container-controls__right');
+    const sliderLeftBtn = section.querySelector('.container-controls__left');
+    const numItemSliderPC = (100/scalePC);
+    const numItemSliderTa = (100/scaleTa);
+    const numItemSliderMb = (100/scaleMb);
+
+    // Handle scroll for slider 
+    let l=0;
+    let movePer = scalePC*2;
+    let maxMove = (sliderItems.length-numItemSliderPC)*scalePC + scalePC;
+    let itemPages = Math.ceil(sliderItems.length/numItemSliderPC);
+ 
+    // Properties scroll for tablet view => update when refresh
+    let tabletViewSldier = window.matchMedia("(max-width: 1113px)");
+    let mobileViewSldier = window.matchMedia("(max-width: 739px)");
+    if(tabletViewSldier.matches) {
+        movePer = scaleTa*2;
+        maxMove = (sliderItems.length-numItemSliderTa)*scaleTa + scaleTa;
+        itemPages = Math.ceil(sliderItems.length/numItemSliderTa);
+    }
+    if (mobileViewSldier.matches) {
+        movePer = scaleMb*(scaleMb==100?1:2);
+        maxMove = (sliderItems.length-numItemSliderMb)*scaleMb + (scaleMb==100?0:scaleMb);
+        itemPages = Math.ceil(sliderItems.length/numItemSliderMb);
+    }
+
+    // Properties scroll for tablet view => update when scroll
+    var onResizeSlider = function() {
+        width = document.body.clientWidth;
+        if(width > 1113) {
+            movePer = scalePC*2;
+            maxMove = (sliderItems.length-numItemSliderPC)*scalePC + scalePC;
+            itemPages = Math.ceil(sliderItems.length/numItemSliderPC);
+            console.log(maxMove);
+        }
+        if(width <= 1113) {
+            movePer = scaleTa*2;
+            maxMove = (sliderItems.length-numItemSliderTa)*scaleTa + scaleTa;
+            itemPages = Math.ceil(sliderItems.length/numItemSliderTa);
+            console.log(maxMove);
+        }
+        if(width <= 739) {
+            movePer = scaleMb*(scaleMb==100?1:2);
+            maxMove = (sliderItems.length-numItemSliderMb)*scaleMb + (scaleMb==100?0:scaleMb);
+            itemPages = Math.ceil(sliderItems.length/numItemSliderMb);
+        }
+
+        // Return first item when scroll change
+        for(var item of sliderItems) {
+            item.style.left = "0%";
+        }
+        l = 0;
+    }
+    window.addEventListener("resize", onResizeSlider);
+
+    sliderRightBtn.onclick = function () {
+        l = l + movePer;
+        console.log(l);
+        console.log(maxMove);
+        // if (sliderItems.length == 1) {l = 0}
+        console.log(sliderItems == 1);
+        for(var item of sliderItems) {
+            if(Math.ceil(l) > Math.ceil(maxMove)) {l = l - movePer}
+            item.style.left = '-' + l + '%';
+        }
+    }
+
+    sliderLeftBtn.onclick = function () {
+        l = l - movePer;
+        if (l<=0) {l = 0}
+
+        for(var item of sliderItems) {
+            if(itemPages > 1)
+                item.style.left = '-' + l + '%';
+        }
+    }
+
+
+}
+const sectionPlaylist = document.querySelector("#playlist-section");
+const sectionAlbum = document.querySelector("#album-section");
+const sectionMv = document.querySelector("#mv-section");
+const sectionSinger = document.querySelector("#singer-section");
+handleSlider(sectionPlaylist, 20, 25, 50);
+handleSlider(sectionAlbum, 20, 25, 50);
+handleSlider(sectionSinger, 20, 25, 50);
+handleSlider(sectionMv, 33.33, 33.33, 100);
+
+
+
 // Handle when click button toggle list music in the right
 toggleListMusicEle.addEventListener('click', (e) => {
     listMusicEle.classList.toggle('active');

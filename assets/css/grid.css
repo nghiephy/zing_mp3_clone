@@ -19,7 +19,7 @@
 
 .row.no-wrap {
     flex-wrap: nowrap;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .row.no-gutters {
