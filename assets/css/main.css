@@ -280,11 +280,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .mymusic-section__body {
-    height: 244px;
+    height: 266px;
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
@@ -824,4 +824,28 @@ button.song-heart-btn .fas {
 .list-music {
     background-color: #170f23;
     border-left: 1px solid hsla(0,0%,100%,0.1);
+}
+
+.no-content {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    padding: 30px;
+    background-color: hsla(0,0%,100%,0.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+
+.no-content i {
+    font-size: 8rem;
+    margin-bottom: 20px;
+    color: hsla(0,0%,100%,0.5);
+}
+
+.no-content span {
+    font-size: 1.6rem;
+    line-height: normal;
+    color: hsla(0,0%,100%,0.5);
 }
