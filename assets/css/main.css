@@ -5,7 +5,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: #170f23;
+    background-color: var(--layout-bg);
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -20,7 +20,7 @@
     padding: 0 4vw;
     display: flex;
     flex-direction: column;
-    background-color: #170f23;
+    background-color: var(--layout-bg);
     /* overflow-x: hidden; */
     /* overflow-y: scroll; */
 }
@@ -45,7 +45,7 @@
     left: 0;
     right: 0;
     height: 300px;
-    background-image: linear-gradient( 180deg,hsla(0,0%,100%,0),#170f23);
+    background-image: linear-gradient( 180deg,hsla(0,0%,100%,0),var(--layout-bg));
 }
 
 .user-profile-wrap {
@@ -100,13 +100,13 @@
 }
 
 .user-profile__actions .get-code {
-    background-color: hsla(0,0%,100%,0.1);
+    background-color: var(--alpha-bg);
     color: #fff;
 }
 
 .user-profile__actions .more {
     padding: 8px;
-    background-color: #362f40;
+    background-color: var(--alpha-bg);
     cursor: pointer;
 }
 
@@ -157,7 +157,7 @@
 }
 
 .main-nav__item.active {
-    background-color: #6e6875;
+    background-color: var(--tab-active-bg);
     border-radius: 100px;
     opacity: 1;
 }
@@ -166,7 +166,7 @@
     flex: 1;
     width: 100%;
     height: 100%;
-    background-color: #170f23;
+    background-color: var(--layout-bg);
 }
 
 .slider-list-wrap,
@@ -273,8 +273,8 @@
 }
 
 .mymusic-controls-play {
-    background-color: #7200a1;
-    border: 1px solid #7200a1;
+    background-color: var(--purple-primary);
+    border: 1px solid var(--purple-primary);
 }
 .mymusic-section__header {
     display: flex;
@@ -441,7 +441,7 @@
 .mymusic-item-info__name-singer a:hover {
     cursor: pointer;
     text-decoration: underline;
-    color: #c662ef;
+    color: var(--link-text-hover);
 }
 
 .mymusic-item-time {
@@ -502,7 +502,7 @@ button.song-heart-btn i {
 }
 
 button.song-heart-btn .fas {
-    color: #7200a1;
+    color: var(--purple-primary);
     opacity: 1;
 }
 
@@ -797,7 +797,7 @@ button.song-heart-btn .fas {
 
 .singer-item-follow-btn {
     color: var(--white-color);
-    background-color: #7200a1;
+    background-color: var(--purple-primary);
     border: none;
     outline: none;
     font-size: 1.2rem;
@@ -822,7 +822,7 @@ button.song-heart-btn .fas {
 }
 
 .list-music {
-    background-color: #170f23;
+    background-color: var(--layout-bg);
     border-left: 1px solid hsla(0,0%,100%,0.1);
 }
 

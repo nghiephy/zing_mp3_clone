@@ -1,14 +1,14 @@
 .list-music {
     position: relative;
     width: 320px;
-    height: 100%;
+    height: calc(100vh - 90px);
     padding: 0 8px 15px 8px;
     overflow: hidden;
     /* transform: translateX(100%); */
 }
 
 .list-music .list {
-    height: calc(100vh - 68px);
+    height: calc(100% - 68px);
     overflow-y: hidden;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .list-controls__tab-item.active {
-    background-color: #6e6875;
+    background-color: var(--tab-active-bg);
     border-radius: 100px;
     opacity: 1;
 }
@@ -78,7 +78,7 @@
 }
 
 .list-controls__timer {
-    background-color: #7200a1;
+    background-color: var(--purple-primary);
     margin: 0 5px;
 }
 
@@ -132,8 +132,16 @@
     border-radius: 5px;
 }
 
+.list-item.active {
+    background-color: var(--purple-primary);
+}
+
+.list-item.active .list-item-info {
+    opacity: 1;
+}
+
 .list-item:hover {
-    background-color: #2f2739;
+    background-color: var(--alpha-bg);
 }
 
 .list-item:hover .list-item-play-btn {
@@ -231,6 +239,14 @@
 
 .playlist-label__link a {
     text-transform: uppercase;
-    color: #c662ef;
+    color: var(--purple-primary);
     font-size: 1.4rem;
+}
+
+.toggle-list-music {
+    padding-left: 2px;
+}
+
+.toggle-list-music.active {
+    background-color: var(--purple-primary);
 }

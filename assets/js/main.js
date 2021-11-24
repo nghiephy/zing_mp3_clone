@@ -9,31 +9,116 @@ const navLayoutEle = document.querySelector('.navigation');
 const navLabelEles = document.querySelectorAll('.main-nav__item');
 const navContentEles = document.querySelectorAll('.nav-content');
 
-// Handle when click heart button
-heartBtnEles.forEach(item => {
-    item.addEventListener('click', (e) => {
-        item.classList.toggle('heart-active');
-        const hearIcon = item.querySelector('i');
-        hearIcon.classList.toggle('far');
-        hearIcon.classList.toggle('fas');
+const sectionPlaylist = document.querySelector("#playlist-section");
+const sectionAlbum = document.querySelector("#album-section");
+const sectionMv = document.querySelector("#mv-section");
+const sectionSinger = document.querySelector("#singer-section");
+
+let imgIndex = 2;
+
+handleFeatureUI();
+slideShow();
+
+handleSlider(sectionPlaylist, 20, 25, 50);
+handleSlider(sectionAlbum, 20, 25, 50);
+handleSlider(sectionSinger, 20, 25, 50);
+handleSlider(sectionMv, 33.33, 33.33, 100);
+
+
+
+
+function handleFeatureUI() {
+    // Handle when click heart button
+    heartBtnEles.forEach(item => {
+        item.addEventListener('click', (e) => {
+            item.classList.toggle('heart-active');
+            const hearIcon = item.querySelector('i');
+            hearIcon.classList.toggle('far');
+            hearIcon.classList.toggle('fas');
+        })
     })
-})
 
-// Handle tabui
-navLabelEles.forEach((navLabelEle, index) => {
-    const navContentEle = navContentEles[index];
+    // Handle tabui
+    navLabelEles.forEach((navLabelEle, index) => {
+        const navContentEle = navContentEles[index];
 
-    navLabelEle.onclick = function () {
-        
-        document.querySelector('.nav-content.active').classList.remove('active');
-        document.querySelector('.main-nav__item.active').classList.remove('active');
+        navLabelEle.onclick = function () {
+            
+            document.querySelector('.nav-content.active').classList.remove('active');
+            document.querySelector('.main-nav__item.active').classList.remove('active');
 
-        this.classList.add('active');
-        navContentEle.classList.add('active');
+            this.classList.add('active');
+            navContentEle.classList.add('active');
 
+        }
+    })
+
+    // Handle when click button toggle list music in the right
+    toggleListMusicEle.addEventListener('click', (e) => {
+        listMusicEle.classList.toggle('active');
+        toggleListMusicEle.classList.toggle('active');
+    })
+
+    // Handle when click button display full nav layout
+    mbNavFulBtn.addEventListener('click', (e) => {
+        navLayoutEle.classList.toggle('small');
+        mbNavFulBtn.querySelector('i').classList.toggle('fa-chevron-right');
+        mbNavFulBtn.querySelector('i').classList.toggle('fa-chevron-left');
+    })
+
+    // Handle display small nav when screen.width < 1023px
+    var onresize = function() {
+        width = document.body.clientWidth;
+        if(width <= 1023) {
+            navLayoutEle.classList.add('small');
+        }
+        if(width > 1023) {
+            navLayoutEle.classList.remove('small');
+        }
+        if(width <= 1635) {
+            listMusicEle.classList.remove('active');
+        }
     }
-})
+    window.addEventListener("resize", onresize);
 
+    
+    // Handle add header background when scroll
+    mainWrapEle.addEventListener('scroll', () => {
+        const headerEle = document.querySelector('.main-wrap .header');
+        if(mainWrapEle.scrollTop > 0)
+            headerEle.classList.add('active-bg');
+        else 
+            headerEle.classList.remove('active-bg');
+
+    })
+
+    // Handle vertical scrollbar in songlist
+    let scrollTimer = -1;
+    musicListEle.addEventListener('scroll', () => {
+        const trackVertical = document.querySelector('.track-vertical');
+        const thumbVertical = trackVertical.querySelector('.thumb-vertical');
+        const totalHeight = musicListEle.scrollHeight - musicListEle.offsetHeight;
+
+        // Set properties when frist begin scroll
+        trackVertical.style.height = musicListEle.scrollHeight + 'px';
+        trackVertical.style.opacity = '1';
+        thumbVertical.style.backgroundColor = '#6e6875';
+        
+        // Calculate value to scroll
+        let progress = musicListEle.scrollTop / totalHeight;
+        let valueTranslateY = progress*musicListEle.offsetHeight - thumbVertical.offsetHeight;
+        valueTranslateY = (valueTranslateY>0)?valueTranslateY:0;
+        thumbVertical.style.transform = 'translatey(' + valueTranslateY + 'px)';
+
+        // Set timeout for vertical scrollbar: it will hidden after 1.5s don't scroll
+        if (scrollTimer != -1)
+            clearTimeout(scrollTimer); // make it don't hiden when scrolling
+
+        scrollTimer = window.setTimeout(() => {
+            trackVertical.style.opacity = 0;
+        }, 1500);
+    })
+}
 
 function handleSlider(section, scalePC, scaleTa, scaleMb) {
     const sliderItems = section.querySelectorAll( ".container-item-wrap");
@@ -96,17 +181,34 @@ function handleSlider(section, scalePC, scaleTa, scaleMb) {
         l = l + movePer;
         console.log(l);
         console.log(maxMove);
-        // if (sliderItems.length == 1) {l = 0}
+
+        sliderLeftBtn.classList.remove('disable');
+
+        if(Math.ceil(l+movePer) > Math.ceil(maxMove)) {
+            sliderRightBtn.classList.add('disable');
+            
+        }
+
         console.log(sliderItems == 1);
         for(var item of sliderItems) {
-            if(Math.ceil(l) > Math.ceil(maxMove)) {l = l - movePer}
+
+            if(Math.ceil(l) > Math.ceil(maxMove)) {
+                l = l - movePer;
+            }
+
             item.style.left = '-' + l + '%';
         }
     }
 
     sliderLeftBtn.onclick = function () {
         l = l - movePer;
-        if (l<=0) {l = 0}
+
+        sliderRightBtn.classList.remove('disable');
+
+        if (l<=0) {
+            l = 0;
+            sliderLeftBtn.classList.add('disable');
+        }
 
         for(var item of sliderItems) {
             if(itemPages > 1)
@@ -116,73 +218,8 @@ function handleSlider(section, scalePC, scaleTa, scaleMb) {
 
 
 }
-const sectionPlaylist = document.querySelector("#playlist-section");
-const sectionAlbum = document.querySelector("#album-section");
-const sectionMv = document.querySelector("#mv-section");
-const sectionSinger = document.querySelector("#singer-section");
-handleSlider(sectionPlaylist, 20, 25, 50);
-handleSlider(sectionAlbum, 20, 25, 50);
-handleSlider(sectionSinger, 20, 25, 50);
-handleSlider(sectionMv, 33.33, 33.33, 100);
-
-
-
-// Handle when click button toggle list music in the right
-toggleListMusicEle.addEventListener('click', (e) => {
-    listMusicEle.classList.toggle('active');
-})
-
-// Handle when click button display full nav layout
-mbNavFulBtn.addEventListener('click', (e) => {
-    navLayoutEle.classList.toggle('small');
-    mbNavFulBtn.querySelector('i').classList.toggle('fa-chevron-right');
-    mbNavFulBtn.querySelector('i').classList.toggle('fa-chevron-left');
-})
-
-// Handle display small nav when screen.width < 1023px
-var onresize = function() {
-    width = document.body.clientWidth;
-    if(width <= 1023) {
-        navLayoutEle.classList.add('small');
-    }
-    if(width > 1023) {
-        navLayoutEle.classList.remove('small');
-    }
-    if(width <= 1635) {
-        listMusicEle.classList.remove('active');
-    }
- }
- window.addEventListener("resize", onresize);
-
-// Handle vertical scrollbar in songlist
-let scrollTimer = -1;
-musicListEle.addEventListener('scroll', () => {
-    const trackVertical = document.querySelector('.track-vertical');
-    const thumbVertical = trackVertical.querySelector('.thumb-vertical');
-    const totalHeight = musicListEle.scrollHeight - musicListEle.offsetHeight;
-
-    // Set properties when frist begin scroll
-    trackVertical.style.height = musicListEle.scrollHeight + 'px';
-    trackVertical.style.opacity = '1';
-    thumbVertical.style.backgroundColor = '#6e6875';
-    
-    // Calculate value to scroll
-    let progress = musicListEle.scrollTop / totalHeight;
-    let valueTranslateY = progress*musicListEle.offsetHeight - thumbVertical.offsetHeight;
-    valueTranslateY = (valueTranslateY>0)?valueTranslateY:0;
-    thumbVertical.style.transform = 'translatey(' + valueTranslateY + 'px)';
-
-    // Set timeout for vertical scrollbar: it will hidden after 1.5s don't scroll
-    if (scrollTimer != -1)
-        clearTimeout(scrollTimer); // make it don't hiden when scrolling
-
-    scrollTimer = window.setTimeout(() => {
-        trackVertical.style.opacity = 0;
-    }, 1500);
-})
 
 //Handle slide show
-let imgIndex = 2;
 function slideShow() {
     const slideImgFirst = document.querySelector('.mymusic-slider-item.first')
     const slideImgSecond = document.querySelector('.mymusic-slider-item.second')
@@ -198,15 +235,3 @@ function slideShow() {
     }
     setTimeout(slideShow, 2000)
 }
-
-// Handle add header background when scroll
-mainWrapEle.addEventListener('scroll', () => {
-    const headerEle = document.querySelector('.main-wrap .header');
-    if(mainWrapEle.scrollTop > 0)
-        headerEle.classList.add('active-bg');
-    else 
-        headerEle.classList.remove('active-bg');
-
-})
-
-slideShow();

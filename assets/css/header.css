@@ -14,7 +14,7 @@
 }
 
 .header.active-bg {
-    background-color: #170f23;
+    background-color: var(--layout-bg);
 }
 
 .search-box {
