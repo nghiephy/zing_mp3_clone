@@ -167,6 +167,71 @@
     align-items: center;
 }
 
+.header-tools-item-wrap {
+    position: relative;
+}
+
+.setting-menu {
+    position: absolute;
+    top: 100%;
+    right: 20%;
+    width: 240px;
+    background-color: var(--primary-bg);
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.setting-menu.disable {
+    display: none;
+}
+
+.setting-menu-list {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.setting-menu-item a {
+    width: 100%;
+    height: 100%;
+    padding: 12px 20px 12px 17px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--navigation-text);
+}
+
+.setting-menu-item a i {
+    margin-right: 12px;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.setting-menu-item a i:last-child {
+    margin-left: auto;
+    font-size: 1.8rem;
+}
+
+.setting-menu-item a p {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.setting-menu-item:hover {
+    background-color: var(--alpha-bg);
+}
+
+.setting-menu-item:hover a {
+    color: var(--text-item-hover);
+}
+
+.menu-footer {
+    margin-top: auto;
+    border-top: 1px solid var(--border-primary);
+    opacity: 0.7;
+}
+
+.label-up-button,
 .header-tools-item {
     width: 40px;
     height: 40px;
@@ -178,14 +243,18 @@
     border-radius: 50%;
     font-size: 1.8rem;
     margin-right: 10px;
+    text-align: center;
 }
 
-.header-tools-item.upload i,
+
+.label-up-button i,
 .header-tools-item.setting i {
     opacity: 0.8;
     color: #fff;
+    text-align: center;
 }
 
+.label-up-button:hover,
 .header-tools-item:hover {
     opacity: 0.9;
 }

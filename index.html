@@ -202,15 +202,88 @@
                 </div>
                 <!-- Header tools layout -->
                 <div class="header-tools">
-                    <button class="header-tools-item theme hide-on-mobile">
-                        <img src="./assets/svg/svg-themet.svg" alt="svg-theme">
-                    </button>
-                    <button class="header-tools-item upload hide-on-mobile">
-                        <i class="fas fa-upload"></i>
-                    </button>
-                    <button class="header-tools-item setting hide-on-mobile">
-                        <i class="fas fa-cogs"></i>
-                    </button>
+                    <div class="header-tools-item-wrap">
+                        <button class="header-tools-item theme hide-on-mobile">
+                            <img src="./assets/svg/svg-themet.svg" alt="svg-theme">
+                        </button>
+                    </div>
+                    <div class="header-tools-item-wrap">
+                        <input type="file" id="up-button" accept="audio/*" style="display: none;" multiple >
+                        <label class="label-up-button" for="up-button">
+                                <i class="fas fa-upload"></i>
+                        </label>
+                    </div>
+                    <div id="header-setting-button" class="header-tools-item-wrap">
+                        <button class="header-tools-item setting hide-on-mobile">
+                            <i class="fas fa-cogs"></i>
+                        </button>
+                        <div class="setting-menu disable">
+                            <ul class="setting-menu-list" >
+                                <li class="setting-menu-item">
+                                    <a href="#">
+                                        <i class="fas fa-ban"></i>
+                                        <p>Danh sách chặn</p>
+                                    </a>
+                                </li>
+                                <li class="setting-menu-item">
+                                    <a href="#">
+                                        <i class="fas fa-music"></i>
+                                        <p>Chất lượng nhạc</p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </li>
+                                <li class="setting-menu-item">
+                                    <a href="#">
+                                        <i class="far fa-play-circle"></i>
+                                        <p>Trình phát nhạc</p>
+                                        <i class="fas fa-chevron-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="menu-footer">
+                                <ul class="setting-menu-list" >
+                                    <li class="setting-menu-item">
+                                        <a href="#">
+                                            <i class="fas fa-info"></i>
+                                            <p>Giới thiệu</p>
+                                        </a>
+                                    </li>
+                                    <li class="setting-menu-item">
+                                        <a href="#">
+                                            <i class="far fa-flag"></i>
+                                            <p>Góp ý</p>
+                                        </a>
+                                    </li>
+                                    <li class="setting-menu-item">
+                                        <a href="#">
+                                            <i class="fas fa-phone"></i>
+                                            <p>Liên hệ</p>
+                                        </a>
+                                    </li>
+                                    <li class="setting-menu-item">
+                                        <a href="#">
+                                            <i class="fab fa-adversal"></i>
+                                            <p>Quảng cáo</p>
+                                        </a>
+                                    </li>
+                                    <li class="setting-menu-item">
+                                        <a href="#">
+                                            <i class="far fa-copy"></i>
+                                            <p>Thoả thuận sử dụng</p>
+                                        </a>
+                                    </li>
+                                    <li class="setting-menu-item">
+                                        <a href="#">
+                                            <i class="fas fa-shield-alt"></i>
+                                            <p>Chính sách bảo mật</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+
                     <div class="avatar-user">
                         <img src="./assets/img/avatar.jpg" alt="avatar-user">
                     </div>

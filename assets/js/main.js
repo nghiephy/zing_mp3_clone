@@ -13,6 +13,7 @@ const sectionPlaylist = document.querySelector("#playlist-section");
 const sectionAlbum = document.querySelector("#album-section");
 const sectionMv = document.querySelector("#mv-section");
 const sectionSinger = document.querySelector("#singer-section");
+const headerSettingBtn = document.querySelector("#header-setting-button");
 
 let imgIndex = 2;
 
@@ -117,6 +118,12 @@ function handleFeatureUI() {
         scrollTimer = window.setTimeout(() => {
             trackVertical.style.opacity = 0;
         }, 1500);
+    })
+
+    // Handle click button setting on header
+    headerSettingBtn.addEventListener('click', () => {
+        const menuEle = headerSettingBtn.querySelector('.setting-menu');
+        menuEle.classList.toggle('disable');
     })
 }
 

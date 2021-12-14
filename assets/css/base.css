@@ -4,9 +4,9 @@
     --nav-bg: #231b2e;
 
  
-    --primary-bg: #fff;
+    --primary-bg: #432275;
     --layout-bg: #170f23;
-    
+    --navigation-text: #dadada;
     --alpha-bg: hsla(0,0%,100%,0.1);
    
     --tab-active-bg: hsla(0,0%,100%,0.3);
@@ -15,6 +15,7 @@
     --purple-primary: #7200a1;
     --link-text-hover: #c662ef;
     --border-primary: hsla(0,0%,100%,0.1);
+    --text-item-hover: #fff;
 }
 
 * {
