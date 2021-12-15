@@ -217,7 +217,7 @@
                         <button class="header-tools-item setting hide-on-mobile">
                             <i class="fas fa-cogs"></i>
                         </button>
-                        <div class="setting-menu disable">
+                        <div id="setting-menu" class="setting-menu disable">
                             <ul class="setting-menu-list" >
                                 <li class="setting-menu-item">
                                     <a href="#">
@@ -231,6 +231,24 @@
                                         <p>Chất lượng nhạc</p>
                                         <i class="fas fa-chevron-right"></i>
                                     </a>
+                                    <div class="sub-menu-quality sub-menu">
+                                        <ul class="menu-quality-list sub-menu-list" >
+                                            <li class="menu-quality-item sub-menu-item disable" >
+                                                <div class="">
+                                                    <h6>SQ&#183;128</h6>
+                                                    <span>Giảm sử dụng dữ liệu cho các kết nối chậm hơn.</span>
+                                                </div>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                            <li class="menu-quality-item sub-menu-item" >
+                                                <div class="">
+                                                    <h6>HQ&#183;320</h6>
+                                                    <span>Kết hợp tốt nhất giữa sử dụng dữ liệu và chất lượng âm thanh.</span>
+                                                </div>
+                                                <i class="fas fa-check"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                                 <li class="setting-menu-item">
                                     <a href="#">
@@ -238,6 +256,17 @@
                                         <p>Trình phát nhạc</p>
                                         <i class="fas fa-chevron-right"></i>
                                     </a>
+                                    <div class="sub-menu">
+                                        <ul class="sub-menu-list menu-player-list">
+                                            <li class="sub-menu-item menu-player-item disable" >
+                                                <h6>Lưu luôn phát toàn màn hình</h6>
+                                                <label class="switch ml-10">
+                                                    <input type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </li>
                             </ul>
                             <div class="menu-footer">
@@ -304,9 +333,23 @@
                     <div class="user-profile__actions hide-on-mobile hide-on-tablet">
                         <span class="buy-vip" >Mua VIP ngay</span>
                         <span class="get-code" >Nhận Code VIP</span>
-                        <button class="more hide-top" data-hide="Khác" >
-                            <i class="fas fa-ellipsis-h"></i>
-                        </button>
+                        <div class="user-option">
+                            <button class="more hide-top" data-hide="Khác" >
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+
+                            <div id="user-option-menu" class="setting-menu disable">
+                                <ul class="setting-menu-list" >
+                                    <li class="setting-menu-item">
+                                        <a href="#">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            <p>Đăng Xuất</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
                     </div>
                     
                 </div>

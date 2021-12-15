@@ -121,9 +121,33 @@ function handleFeatureUI() {
     })
 
     // Handle click button setting on header
-    headerSettingBtn.addEventListener('click', () => {
-        const menuEle = headerSettingBtn.querySelector('.setting-menu');
-        menuEle.classList.toggle('disable');
+    // headerSettingBtn.addEventListener('click', () => {
+    //     const menuEle = headerSettingBtn.querySelector('#setting-menu');
+    //     menuEle.classList.toggle('disable');
+    // })
+
+    // Detecting user click outsile some element in website
+    document.addEventListener('click', (event) => {
+        const settingMenuEle = document.querySelector('#setting-menu');
+        const userOptionMenuEle = document.querySelector('#user-option-menu');
+        const userOptionBtn = document.querySelector('.user-option');
+        let targetElement = event.target;
+
+        do {
+            if(targetElement == settingMenuEle) {
+                return;
+            }
+            if(targetElement == headerSettingBtn) {
+                settingMenuEle.classList.toggle('disable');
+                return;
+            }
+            if(targetElement == userOptionBtn) {
+                userOptionMenuEle.classList.toggle('disable');
+                return;
+            }
+            targetElement = targetElement.parentNode;
+        } while(targetElement);
+        settingMenuEle.classList.add('disable');
     })
 }
 

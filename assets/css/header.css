@@ -171,6 +171,7 @@
     position: relative;
 }
 
+.sub-menu,
 .setting-menu {
     position: absolute;
     top: 100%;
@@ -187,8 +188,12 @@
 
 .setting-menu-list {
     list-style: none;
-    padding: 10px 0;
+    padding: 5px 0;
     margin: 0;
+}
+
+.setting-menu-item {
+    position: relative;
 }
 
 .setting-menu-item a {
@@ -202,12 +207,15 @@
 }
 
 .setting-menu-item a i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
     margin-right: 12px;
     font-size: 2rem;
     opacity: 0.8;
 }
 
-.setting-menu-item a i:last-child {
+.setting-menu-item a i:nth-child(3) {
     margin-left: auto;
     font-size: 1.8rem;
 }
@@ -223,6 +231,65 @@
 
 .setting-menu-item:hover a {
     color: var(--text-item-hover);
+}
+
+.sub-menu {
+    position: absolute;
+    top: 0;
+    left: -112%;
+    margin: 0;
+    width:270px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    display: none;
+}
+
+.setting-menu-item:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu-list {
+    padding: 0;
+    list-style: none;
+    padding: 10px 0;
+}
+
+.sub-menu-list h6 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    margin-bottom: 6px;
+}
+
+.sub-menu-list span {
+    font-size: 1.2rem;
+    color: var(--navigation-text);
+    opacity: 0.7;
+}
+
+.sub-menu-item {
+    padding: 8px 10px 8px 17px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sub-menu-item i {
+    font-size: 1.8rem;
+    color: var(--white-color);
+    opacity: 0.8;
+}
+
+.sub-menu-item.disable i {
+    color: transparent;
+}
+
+.sub-menu-item:hover {
+    background-color: var(--alpha-bg);
+    cursor: pointer;
+}
+
+.menu-player-item h6 {
+    margin: 0;
 }
 
 .menu-footer {

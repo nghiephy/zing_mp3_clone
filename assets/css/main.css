@@ -104,6 +104,10 @@
     color: #fff;
 }
 
+.user-option {
+    position: relative;
+}
+
 .user-profile__actions .more {
     padding: 8px;
     background-color: var(--alpha-bg);
