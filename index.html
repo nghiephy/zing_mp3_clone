@@ -338,9 +338,9 @@
                                 <i class="fas fa-ellipsis-h"></i>
                             </button>
 
-                            <div id="user-option-menu" class="setting-menu disable">
-                                <ul class="setting-menu-list" >
-                                    <li class="setting-menu-item">
+                            <div id="user-option-menu" class="sub-menu-parent disable">
+                                <ul class="sub-menu-parent-list" >
+                                    <li class="sub-menu-parent-item">
                                         <a href="#">
                                             <i class="fas fa-sign-out-alt"></i>
                                             <p>Đăng Xuất</p>
@@ -2482,437 +2482,603 @@
                 <button class="list-controls__timer">
                     <i class="far fa-clock"></i>
                 </button>
-                <button class="list-controls__other">
-                    <i class="fas fa-ellipsis-h"></i>
-                </button>
+
+                <div class="list-controls__other-wrap">
+                    <button class="list-controls__other">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+
+                    <div class="sub-menu-parent list-controls__menu disable">
+                        <ul class="sub-menu-parent-list " >
+                            <li class="sub-menu-parent-item">
+                                <a href="#">
+                                    <i class="fas fa-trash-alt"></i>
+                                    <p>Xoá danh sách phát</p>
+                                </a>
+                            </li>
+                            <li class="sub-menu-parent-item">
+                                <a href="#">
+                                    <i class="fas fa-download"></i>
+                                    <p>Tải danh sách phát</p>
+                                </a>
+                            </li>
+                            <li class="sub-menu-parent-item">
+                                <a href="#">
+                                    <i class="fas fa-plus"></i>
+                                    <p>Thêm vào playlist</p>
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                                <div class="sub-menu-child add-playlist-option">
+                                    <div class="search-playlist-wrap">
+                                        <label class="search-playlist-input" for="search-playlist-input">
+                                            <input type="text" name="" id="search-playlist-input" placeholder="Tìm playlist">
+                                        </label>
+                                    </div>
+                                    <ul class=" sub-menu-child-list add-playlist-menu" >
+                                        <li class="sub-menu-child-item add-playlist-item" >
+                                            <a href="#">
+                                                <img src="./assets/svg/add-playlist.svg" alt="">
+                                                <p>Tạo playlist mới</p>
+                                            </a>
+                                        </li>
+                                        <li class="sub-menu-child-item add-playlist-item" >
+                                            <a href="#">
+                                                <i class="fas fa-headphones-alt"></i>
+                                                <p>karaoke</p>
+                                            </a>
+                                        </li>
+                                        <li class="sub-menu-child-item add-playlist-item" >
+                                            <a href="#">
+                                                <i class="fas fa-headphones-alt"></i>
+                                                <p>bolero</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        
+                
             </div>
             <div class="list">
-                <div class="list-played">
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_1.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Sợ Phải Kết Thúc</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Nhật Phong</a>
+                <div class="list-content-item active">
+                    <div class="list-played">
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_1.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Sợ Phải Kết Thúc</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Nhật Phong</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
                             </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_9.jpg" alt="song1">
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
                             </div>
-                            <div class="list-item-info__name">
-                                <h4>Tan Vỡ</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Chi Dân</a>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_9.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Tan Vỡ</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Chi Dân</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
                             </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_10.jpg" alt="song1">
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
                             </div>
-                            <div class="list-item-info__name">
-                                <h4>Thay Lòng</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>DIMZ</a>,
-                                    <a>TVk</a>,
-                                    <a>NH4T</a>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_10.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Thay Lòng</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>DIMZ</a>,
+                                        <a>TVk</a>,
+                                        <a>NH4T</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
                             </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item active">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_11.jpg" alt="song1">
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
                             </div>
-                            <div class="list-item-info__name">
-                                <h4>Yêu Là Cưới</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Phát Hồ</a>,
-                                    <a>X2X</a>
+                        </div>
+                        <div class="list-item active">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_11.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Yêu Là Cưới</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Phát Hồ</a>,
+                                        <a>X2X</a>
+                                    </div>
                                 </div>
                             </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
                         </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
+                        
+                    </div>
+    
+                    <div class="playlist-label">
+                        <h4>Tiếp theo</h4>
+                        <div class="playlist-label__link">
+                            <span>Từ playlist</span>
+                            <a href="#">#ZINGCHART</a>
                         </div>
                     </div>
-                    
+    
+                    <div class="list-next">
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_12.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Sợ Phải Kết Thúc</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Nhật Phong</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_13.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Tan Vỡ</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Chi Dân</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_14.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Thay Lòng</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>DIMZ</a>,
+                                        <a>TVk</a>,
+                                        <a>NH4T</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_15.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Yêu Là Cưới</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Phát Hồ</a>,
+                                        <a>X2X</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_2.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Sợ Phải Kết Thúc</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Nhật Phong</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_3.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Tan Vỡ</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Chi Dân</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_4.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Thay Lòng</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>DIMZ</a>,
+                                        <a>TVk</a>,
+                                        <a>NH4T</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_5.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Yêu Là Cưới</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Phát Hồ</a>,
+                                        <a>X2X</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_6.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Sợ Phải Kết Thúc</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Nhật Phong</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_7.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Tan Vỡ</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Chi Dân</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_8.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Thay Lòng</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>DIMZ</a>,
+                                        <a>TVk</a>,
+                                        <a>NH4T</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_9.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Yêu Là Cưới</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Phát Hồ</a>,
+                                        <a>X2X</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
+                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-
-                <div class="playlist-label">
-                    <h4>Tiếp theo</h4>
-                    <div class="playlist-label__link">
-                        <span>Từ playlist</span>
-                        <a href="#">#ZINGCHART</a>
-                    </div>
-                </div>
-
-                <div class="list-next">
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_12.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Sợ Phải Kết Thúc</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Nhật Phong</a>
+                <div class="list-content-item ">
+                    <div class="list-played">
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_1.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Sợ Phải Kết Thúc</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Nhật Phong</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
                             </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_13.jpg" alt="song1">
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
                             </div>
-                            <div class="list-item-info__name">
-                                <h4>Tan Vỡ</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Chi Dân</a>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_9.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Tan Vỡ</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Chi Dân</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
                             </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_14.jpg" alt="song1">
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
                             </div>
-                            <div class="list-item-info__name">
-                                <h4>Thay Lòng</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>DIMZ</a>,
-                                    <a>TVk</a>,
-                                    <a>NH4T</a>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_10.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Thay Lòng</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>DIMZ</a>,
+                                        <a>TVk</a>,
+                                        <a>NH4T</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
                             </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_15.jpg" alt="song1">
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
                             </div>
-                            <div class="list-item-info__name">
-                                <h4>Yêu Là Cưới</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Phát Hồ</a>,
-                                    <a>X2X</a>
+                        </div>
+                        <div class="list-item active">
+                            <div class="list-item-info">
+                                <div class="list-item-info__imgBox">
+                                    <img src="./assets/img/songs/song_img_11.jpg" alt="song1">
+                                </div>
+                                <div class="list-item-info__name">
+                                    <h4>Yêu Là Cưới</h4>
+                                    <div class="list-item-info__name-singer">
+                                        <a>Phát Hồ</a>,
+                                        <a>X2X</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
+                            <button class="list-item-play-btn" >
+                                <i class="fas fa-play"></i>
                             </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
+    
+                            <div class="list-item__more">
+                                <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
+                                    <i class="far fa-heart"></i>
+                                </button>
+                                <button class=" more hide-top" data-hide="Xem thêm" >
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                            </div>
                         </div>
+                        
                     </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_2.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Sợ Phải Kết Thúc</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Nhật Phong</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_3.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Tan Vỡ</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Chi Dân</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_4.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Thay Lòng</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>DIMZ</a>,
-                                    <a>TVk</a>,
-                                    <a>NH4T</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_5.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Yêu Là Cưới</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Phát Hồ</a>,
-                                    <a>X2X</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_6.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Sợ Phải Kết Thúc</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Nhật Phong</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_7.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Tan Vỡ</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Chi Dân</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_8.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Thay Lòng</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>DIMZ</a>,
-                                    <a>TVk</a>,
-                                    <a>NH4T</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item-info">
-                            <div class="list-item-info__imgBox">
-                                <img src="./assets/img/songs/song_img_9.jpg" alt="song1">
-                            </div>
-                            <div class="list-item-info__name">
-                                <h4>Yêu Là Cưới</h4>
-                                <div class="list-item-info__name-singer">
-                                    <a>Phát Hồ</a>,
-                                    <a>X2X</a>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="list-item-play-btn" >
-                            <i class="fas fa-play"></i>
-                        </button>
-
-                        <div class="list-item__more">
-                            <button class="song-heart-btn like hide-top" data-hide="Thêm vào thư viện">
-                                <i class="far fa-heart"></i>
-                            </button>
-                            <button class=" more hide-top" data-hide="Xem thêm" >
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
             

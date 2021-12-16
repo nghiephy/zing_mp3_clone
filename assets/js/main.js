@@ -8,6 +8,9 @@ const mbNavFulBtn = document.querySelector('.navigation .mb-nav-full-btn');
 const navLayoutEle = document.querySelector('.navigation');
 const navLabelEles = document.querySelectorAll('.main-nav__item');
 const navContentEles = document.querySelectorAll('.nav-content');
+const qualityEles = document.querySelectorAll('.menu-quality-item');
+const historyTabEles = document.querySelectorAll('.list-controls__tab-item');
+const historyContentEles = document.querySelectorAll('.list-content-item');
 
 const sectionPlaylist = document.querySelector("#playlist-section");
 const sectionAlbum = document.querySelector("#album-section");
@@ -51,6 +54,19 @@ function handleFeatureUI() {
             this.classList.add('active');
             navContentEle.classList.add('active');
 
+        }
+    })
+
+    // Handle tab history play music right layout
+    historyTabEles.forEach((historyTabEle, index) => {
+        const historyContentEle = historyContentEles[index];
+
+        historyTabEle.onclick = function () {
+            document.querySelector('.list-controls__tab-item.active').classList.remove('active');
+            document.querySelector('.list-content-item.active').classList.remove('active');
+
+            this.classList.add('active');
+            historyContentEle.classList.add('active');
         }
     })
 
@@ -120,25 +136,40 @@ function handleFeatureUI() {
         }, 1500);
     })
 
-    // Handle click button setting on header
-    // headerSettingBtn.addEventListener('click', () => {
-    //     const menuEle = headerSettingBtn.querySelector('#setting-menu');
-    //     menuEle.classList.toggle('disable');
-    // })
+    // Handle chosing quality music on header
+    qualityEles.forEach((qualityEle, index) => {
+        qualityEle.addEventListener('click', (event) => {
+            qualityEle.classList.remove('disable');
+            qualityEles.forEach(item => {
+                if(item != qualityEle) {
+                    item.classList.add('disable');
+                }
+            })
+        })
+    })    
 
     // Detecting user click outsile some element in website
     document.addEventListener('click', (event) => {
         const settingMenuEle = document.querySelector('#setting-menu');
         const userOptionMenuEle = document.querySelector('#user-option-menu');
         const userOptionBtn = document.querySelector('.user-option');
+        const historyOtherBtn = document.querySelector('.list-controls__other-wrap');
+        const historyOtherEle = document.querySelector('.list-controls__menu');
         let targetElement = event.target;
 
         do {
             if(targetElement == settingMenuEle) {
                 return;
             }
+            if(targetElement == historyOtherEle) {
+                return;
+            }
             if(targetElement == headerSettingBtn) {
                 settingMenuEle.classList.toggle('disable');
+                return;
+            }
+            if(targetElement == historyOtherBtn) {
+                historyOtherEle.classList.toggle('disable');
                 return;
             }
             if(targetElement == userOptionBtn) {

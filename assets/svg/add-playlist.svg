@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20" version="1.1">
+    <title>add playlist</title>
+    <defs>
+        <linearGradient x1="-11.2417244%" y1="105.018729%" x2="103.770488%" y2="-22.9524219%" id="linearGradient-1">
+            <stop stop-color="#5A1EAE" offset="0%"/>
+            <stop stop-color="#CE267A" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="0%" y1="0%" x2="123.089493%" y2="153.317075%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="100%"/>
+        </linearGradient>
+        <rect id="path-3" x="0" y="0" width="19" height="19" rx="4"/>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="menu/tab/playlist" transform="translate(0.000000, -37.000000)">
+            <g id="add-playlist" transform="translate(0.000000, 37.000000)">
+                <g id="Rectangle">
+                    <use fill="url(#linearGradient-1)" xlink:href="#path-3"/>
+                    <use fill-opacity="0.6" fill="url(#linearGradient-2)" xlink:href="#path-3"/>
+                </g>
+                <line x1="9.5" y1="4.5" x2="9.5" y2="14.5" id="Line-7" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                <line x1="14.5" y1="9.5" x2="4.5" y2="9.5" id="Line-7" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+        </g>
+    </g>
+</svg>
