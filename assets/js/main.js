@@ -22,6 +22,7 @@ let imgIndex = 2;
 
 handleFeatureUI();
 slideShow();
+handleModal();
 
 handleSlider(sectionPlaylist, 20, 25, 50);
 handleSlider(sectionAlbum, 20, 25, 50);
@@ -74,6 +75,27 @@ function handleFeatureUI() {
     toggleListMusicEle.addEventListener('click', (e) => {
         listMusicEle.classList.toggle('active');
         toggleListMusicEle.classList.toggle('active');
+    })
+
+    // Detecting user click outsie the list music in the right
+    document.addEventListener('click', (event) => {
+        const listMusicEle = document.querySelector('.list-music');
+        const modalOverlayEle = document.querySelector('.modal__overlay');
+        const modalExitBtn = document.querySelector('.modal__theme-exit');
+        let targetElement = event.target;
+
+        do {
+            if(targetElement == listMusicEle || targetElement == toggleListMusicEle) {
+                return;
+            }
+            if(targetElement == modalOverlayEle || targetElement == modalExitBtn) {
+                return;
+            }
+            
+            targetElement = targetElement.parentNode;
+        } while(targetElement);
+        listMusicEle.classList.remove('active');
+        toggleListMusicEle.classList.remove('active');
     })
 
     // Handle when click button display full nav layout
@@ -148,15 +170,17 @@ function handleFeatureUI() {
         })
     })    
 
-    // Detecting user click outsile some element in website
+    // Detecting user click on website
     document.addEventListener('click', (event) => {
         const settingMenuEle = document.querySelector('#setting-menu');
         const userOptionMenuEle = document.querySelector('#user-option-menu');
         const userOptionBtn = document.querySelector('.user-option');
         const historyOtherBtn = document.querySelector('.list-controls__other-wrap');
         const historyOtherEle = document.querySelector('.list-controls__menu');
+        const listMusicEle = document.querySelector('.list-music');
         let targetElement = event.target;
 
+        // Detecting user click inside some menu on website
         do {
             if(targetElement == settingMenuEle) {
                 return;
@@ -176,9 +200,11 @@ function handleFeatureUI() {
                 userOptionMenuEle.classList.toggle('disable');
                 return;
             }
+
             targetElement = targetElement.parentNode;
         } while(targetElement);
         settingMenuEle.classList.add('disable');
+        historyOtherEle.classList.add('disable');
     })
 }
 
@@ -296,4 +322,33 @@ function slideShow() {
         imgIndex = 0;
     }
     setTimeout(slideShow, 2000)
+}
+
+// Handle modal display
+function handleModal() {
+    const modalOverlayEle = document.querySelector('.modal__overlay');
+    const modalEle = document.querySelector('.modal');
+    const modalExitBtn = document.querySelector('.modal__theme-exit');
+    const modalLabelList = document.querySelectorAll('.modal-label');
+    let modalItem;
+    
+    modalLabelList.forEach(modalLabel => {
+        modalLabel.addEventListener('click', (e) => {
+            modalItem = document.getElementById(modalLabel.dataset.modalId);
+
+            modalItem.classList.add('active');
+            modalEle.classList.add('active');
+        })
+    })
+
+    modalOverlayEle.addEventListener('click', () => {
+        modalItem.classList.remove('active');
+        modalEle.classList.remove('active');
+    })
+
+    modalExitBtn.addEventListener('click', () => {
+        modalItem.classList.remove('active');
+        modalEle.classList.remove('active');
+    })
+
 }

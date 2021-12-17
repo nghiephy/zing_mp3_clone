@@ -202,7 +202,7 @@
                 </div>
                 <!-- Header tools layout -->
                 <div class="header-tools">
-                    <div class="header-tools-item-wrap">
+                    <div id="header-change-theme" class="modal-label header-tools-item-wrap" data-modal-id="modal-theme">
                         <button class="header-tools-item theme hide-on-mobile">
                             <img src="./assets/svg/svg-themet.svg" alt="svg-theme">
                         </button>
@@ -2479,7 +2479,7 @@
                     <span class="list-controls__tab-item active" >Danh sách phát</span>
                     <span class="list-controls__tab-item " >Nghe gần đây</span>
                 </div>
-                <button class="list-controls__timer">
+                <button class="modal-label list-controls__timer" data-modal-id="modal-timer">
                     <i class="far fa-clock"></i>
                 </button>
 
@@ -3230,6 +3230,536 @@
             </div>
         </div>
         <!----x---- Playing song section in the footer -----x---->
+
+        <!--------- Modal section ---------->
+        <div class="modal">
+            <div class="modal__overlay"></div>
+            <div class="modal__body">
+                <div id="modal-theme" class="modal__item modal__theme">
+                    <div class="modal__theme-header">
+                        <h3 class="modal__theme-title">Giao diện</h3>
+                        <div class="modal__theme-exit">
+                            <i class="fas fa-times"></i>
+                        </div>
+                    </div>
+                    <div class="modal__theme-content">
+                        <div class="modal__theme-container dynamic">
+                            <h3 class="title">Dynamic</h3>
+                            <div class="row sm-7-gutter">
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box">
+                                            <img src="./assets/img/modal/theme/dynamic/dynamic-light.jpg" alt="dynamic-light">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Sáng Tối</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dynamic/London-thumb.png" alt="london-thumb">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >London</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box">
+                                            <img src="./assets/img/modal/theme/dynamic/dynamic-blue.jpg" alt="dynamic-blue">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Xanh da trời</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box">
+                                            <img src="./assets/img/modal/theme/dynamic/dynamic-pink.jpg" alt="dynamic-pink">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Hồng</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box">
+                                            <img src="./assets/img/modal/theme/dynamic/dynamic-brown.jpg" alt="dynamic-brown">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Nâu</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__theme-container topic">
+                            <h3 class="title">Chủ đề</h3>
+                            <div class="row sm-7-gutter">
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/topic/zma.jpg" alt="zma">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Zing Music Awards</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/topic/eiffel.jpg" alt="eiffel">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Tháp Eiffel</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__theme-container artist">
+                            <h3 class="title">Nghệ sĩ</h3>
+                            <div class="row sm-7-gutter">
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/artist/jack.jpg" alt="jack">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Jack</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/artist/iu.jpg" alt="iu">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >IU</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/artist/ji-chang-wook.jpg" alt="ji-chang-wook">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Ji Chang Wook</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/artist/lisa.jpg" alt="lisa">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Lisa</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/artist/jennie.jpg" alt="jennie">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Jennie Kim</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/artist/jisoo.jpg" alt="jisoo">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Jisoo</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/artist/rose.jpg" alt="rose">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Rosé</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__theme-container dark-color">
+                            <h3 class="title">Màu Tối</h3>
+                            <div class="row sm-7-gutter">
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dark-color/dark.jpg" alt="dark">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Tối</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item active">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dark-color/purple.jpg" alt="purple">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Tím</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dark-color/blue.jpg" alt="blue">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Xanh Đậm</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dark-color/blue-light.jpg" alt="blue-light">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Xanh Biển</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dark-color/green.jpg" alt="green">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Xanh Lá</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dark-color/brown.jpg" alt="brown">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Nâu</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dark-color/pink.jpg" alt="pink">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Hồng</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/dark-color/red.jpg" alt="red">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Đỏ</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal__theme-container light-color">
+                            <h3 class="title">Màu Sáng</h3>
+                            <div class="row sm-7-gutter">
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/light-color/light.jpg" alt="light">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Sáng</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/light-color/gray.jpg" alt="gray">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Xám</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/light-color/green-light.jpg" alt="green-light">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Xanh Nhạt</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col l-2 m-3 c-4">
+                                    <div class="modal__theme-item">
+                                        <div class="img-box scale">
+                                            <img src="./assets/img/modal/theme/light-color/pink-light.jpg" alt="pink-light">
+                                            <div class="img-box__opacity"></div>
+                                            <div class="img-box__actions">
+                                                <button class="btn btn--type1" >Áp dụng</button>
+                                                <button class="btn btn--type2" >Xem trước</button>
+                                            </div>
+                                            <div class="img-box__icon">
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </div>
+                                        <div class="content-box">
+                                            <h4 class="content-box__title" >Cánh Hồng Sen</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="modal-timer" class="modal__item">
+                    <h3 class="title" >Hẹn giờ dừng phát nhạc</h3>
+                    <div class="time-picker">
+                        <div class="time-input">
+                            <div class="time-control">
+                                <input type="text" value="00">
+                            </div>
+                            <div class="label">Giờ</div>
+                        </div>
+                        <div class="dot">:</div>
+                        <div class="time-input">
+                            <div class="time-control">
+                                <input type="text" value="00">
+                            </div>
+                            <div class="label">Phút</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----x---- Modal section -----x---->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
