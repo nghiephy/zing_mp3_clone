@@ -210,6 +210,32 @@ function handleFeatureUI() {
         settingMenuEle.classList.add('disable');
         historyOtherEle.classList.add('disable');
     })
+
+    // Handle focus on input in timer modal
+    document.addEventListener('click', (e) => {
+        const inputHourTimer = document.getElementById('input-hour-timer');
+        const inputMinuteTimer = document.getElementById('input-minute-timer');
+        let targetElement = e.target;
+
+        do {
+            if(targetElement == inputHourTimer) {
+                inputHourTimer.classList.add('focus');
+                inputMinuteTimer.classList.remove('focus');
+                return;
+            }
+            if(targetElement == inputMinuteTimer) {
+                inputMinuteTimer.classList.add('focus');
+                inputHourTimer.classList.remove('focus');
+                return;
+            }
+
+            targetElement = targetElement.parentNode;
+        } while (targetElement);
+        inputHourTimer.classList.remove('focus');
+        inputMinuteTimer.classList.remove('focus');
+        
+    })
+    
 }
 
 function handleSlider(section, scalePC, scaleTa, scaleMb) {

@@ -17,6 +17,7 @@
     --link-text-hover: #c662ef;
     --border-primary: hsla(0,0%,100%,0.1);
     --text-item-hover: #fff;
+    --portal-menu-box-shadow: rgba(0,0,0,0.2);
 }
 
 * {

@@ -1095,6 +1095,45 @@ button.song-heart-btn .fas {
     text-transform: uppercase;
     color: var(--text-secondary);
     font-size: 1.4rem;
+    position: relative;
+}
+
+.time-input .time-option {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    height: 125px;
+    border-radius: 5px;
+    background-color: var(--primary-bg);
+    box-shadow: 0 2px 5px var(--portal-menu-box-shadow);
+    overflow-y: scroll;
+    z-index: 1;
+    display: none;
+}
+
+.time-input.focus {
+    border-bottom: 2px solid var(--purple-primary);
+}
+
+.time-input.focus .time-option {
+    display: block;
+}
+
+.time-option ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.time-option ul li {
+    font-size: 1.4rem;
+    padding: 9px 0;
+}
+
+.time-option ul li:hover {
+    background-color: var(--alpha-bg);
+    cursor: default;
 }
 
 .btn-timer-save {
