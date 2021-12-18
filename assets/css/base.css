@@ -4,6 +4,7 @@
     --nav-bg: #231b2e;
 
     --text-primary: #fff;
+    --text-secondary: hsla(0,0%,100%,0.5);
     --primary-bg: #432275;
     --layout-bg: #170f23;
     --navigation-text: #dadada;
@@ -328,6 +329,14 @@ html {
     z-index: 2;
 }
 
+.modal__item {
+    display: none;
+}
+
+.modal__item.active {
+    display: block;
+}
+
 /* Common class */
 
 .inner-border {
@@ -491,6 +500,16 @@ html {
     line-height: 1.6rem;
 }
 
+.btn.disable {
+    opacity: 0.7;
+    /* pointer-events: none; */
+    cursor: not-allowed;
+}
+
+.btn.disable:hover {
+    opacity: 0.7!important;
+}
+
 .btn-back:hover {
     color: #333;
     background: #f8f8f8;
@@ -541,6 +560,7 @@ html {
     font-size: 8px;
     margin-bottom: 10px;
     opacity: 0.95;
+    display: block;
 }
 
 .btn--type2 {
@@ -562,6 +582,7 @@ html {
 .btn--type2:hover {
     opacity: 0.8;
 }
+
 
 /* Selection */
 .select-input {

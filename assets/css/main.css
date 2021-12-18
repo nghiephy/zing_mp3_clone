@@ -1027,3 +1027,88 @@ button.song-heart-btn .fas {
 .modal__theme-exit:hover i {
     opacity: 0.85;
 }
+
+#modal-timer {
+    padding: 30px 25px 10px 25px;
+    width: 330px;
+    text-align: center;
+}   
+
+#modal-timer .title {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+#modal-timer .subtitle {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: var(--text-secondary);
+}
+
+.time-picker {
+    padding: 15px 20px 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--alpha-bg);
+    border-radius: 8px;
+    color: var(--text-primary);
+}
+
+.time-picker .dot {
+    font-size: 3.4rem;
+    line-height: 40px;
+}
+
+.time-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+    width: 100px;
+    padding: 5px 0;
+}
+
+.time-control {
+    text-align: center;
+    clear: both;
+}
+
+.time-control input {
+    border: none;
+    width: 50px;
+    height: 40px;
+    font-size: 3.4rem;
+    padding: 0;
+    letter-spacing: 3px;
+    color: var(--text-primary);
+    background-color: transparent;
+}
+
+.time-control input:focus {
+    outline: none;
+}
+
+.time-input .label {
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+}
+
+.btn-timer-save {
+    margin: 0 auto;
+    width: 100%;
+    font-size: 1.4rem;
+    height: 38px;
+}
+
+.btn-timer-cancel {
+    width: 100%;
+    font-size: 1.4rem;
+    height: 38px;
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+}

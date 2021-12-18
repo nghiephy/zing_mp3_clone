@@ -82,6 +82,7 @@ function handleFeatureUI() {
         const listMusicEle = document.querySelector('.list-music');
         const modalOverlayEle = document.querySelector('.modal__overlay');
         const modalExitBtn = document.querySelector('.modal__theme-exit');
+        const modalTimerEle = document.getElementById('modal-timer');
         let targetElement = event.target;
 
         do {
@@ -89,6 +90,9 @@ function handleFeatureUI() {
                 return;
             }
             if(targetElement == modalOverlayEle || targetElement == modalExitBtn) {
+                return;
+            }
+            if(targetElement == modalTimerEle) {
                 return;
             }
             
@@ -328,7 +332,7 @@ function slideShow() {
 function handleModal() {
     const modalOverlayEle = document.querySelector('.modal__overlay');
     const modalEle = document.querySelector('.modal');
-    const modalExitBtn = document.querySelector('.modal__theme-exit');
+    const modalExitBtns = document.querySelectorAll('.modal__theme-exit');
     const modalLabelList = document.querySelectorAll('.modal-label');
     let modalItem;
     
@@ -346,9 +350,11 @@ function handleModal() {
         modalEle.classList.remove('active');
     })
 
-    modalExitBtn.addEventListener('click', () => {
-        modalItem.classList.remove('active');
-        modalEle.classList.remove('active');
+    modalExitBtns.forEach(modalExitBtn => {
+        modalExitBtn.addEventListener('click', () => {
+            modalItem.classList.remove('active');
+            modalEle.classList.remove('active');
+        }) 
     })
 
 }
