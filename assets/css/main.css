@@ -827,7 +827,7 @@ button.song-heart-btn .fas {
 
 .list-music {
     background-color: var(--layout-bg);
-    border-left: 1px solid hsla(0,0%,100%,0.1);
+    border-left: 1px solid var(--alpha-bg);
 }
 
 .no-content {

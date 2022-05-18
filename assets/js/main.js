@@ -29,9 +29,6 @@ handleSlider(sectionAlbum, 20, 25, 50);
 handleSlider(sectionSinger, 20, 25, 50);
 handleSlider(sectionMv, 33.33, 33.33, 100);
 
-
-
-
 function handleFeatureUI() {
     // Handle when click heart button
     heartBtnEles.forEach(item => {
@@ -111,7 +108,7 @@ function handleFeatureUI() {
 
     // Handle display small nav when screen.width < 1023px
     var onresize = function() {
-        width = document.body.clientWidth;
+        var width = document.body.clientWidth;
         if(width <= 1023) {
             navLayoutEle.classList.add('small');
         }
@@ -273,13 +270,11 @@ function handleSlider(section, scalePC, scaleTa, scaleMb) {
             movePer = scalePC*2;
             maxMove = (sliderItems.length-numItemSliderPC)*scalePC + scalePC;
             itemPages = Math.ceil(sliderItems.length/numItemSliderPC);
-            console.log(maxMove);
         }
         if(width <= 1113) {
             movePer = scaleTa*2;
             maxMove = (sliderItems.length-numItemSliderTa)*scaleTa + scaleTa;
             itemPages = Math.ceil(sliderItems.length/numItemSliderTa);
-            console.log(maxMove);
         }
         if(width <= 739) {
             movePer = scaleMb*(scaleMb==100?1:2);
@@ -297,8 +292,6 @@ function handleSlider(section, scalePC, scaleTa, scaleMb) {
 
     sliderRightBtn.onclick = function () {
         l = l + movePer;
-        console.log(l);
-        console.log(maxMove);
 
         sliderLeftBtn.classList.remove('disable');
 
@@ -307,7 +300,6 @@ function handleSlider(section, scalePC, scaleTa, scaleMb) {
             
         }
 
-        console.log(sliderItems == 1);
         for(var item of sliderItems) {
 
             if(Math.ceil(l) > Math.ceil(maxMove)) {

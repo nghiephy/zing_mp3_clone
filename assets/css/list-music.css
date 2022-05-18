@@ -2,7 +2,7 @@
     position: relative;
     width: 320px;
     height: calc(100vh - 90px);
-    padding: 0 8px 15px 8px;
+    padding: 0 8px 0 8px;
     /* overflow: hidden; */
     /* transform: translateX(100%); */
 }
